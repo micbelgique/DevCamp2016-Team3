@@ -11,6 +11,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 router.use("/missions", require("./routes/missions"));
+router.use("/explorations", require("./routes/explorations"));
 router.all("*", (req, res) => {
   res.status(404).send("Not Found");
 });
