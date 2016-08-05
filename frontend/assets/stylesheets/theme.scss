@@ -1,0 +1,56 @@
+html {
+  font-family: 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
+  letter-spacing: .01em;
+}
+
+h1 {
+  color: $white;
+  font-size: 1.2rem;
+}
+
+h2 {
+  margin-top: 10px;
+  color: $white;
+  font-size: .8rem;
+  font-weight: 300;
+  span {
+    padding-left: 14px;
+  }
+  span:first-child {
+    background: url(../images/geo.svg) no-repeat left center;
+    background-size: 10px;
+  }
+  span:last-child {
+    background: url(../images/badge.svg) no-repeat left center;
+    margin-left: 12px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $font-grey;
+}
+
+article {
+  width: 100vw;
+  height: 100vh;
+}
+
+article::-webkit-scrollbar { 
+  width: 0 !important;
+}
+
+
+// MISSIONS
+
+#missions {
+  li+li {
+    border: 0.5px solid $white;
+    border-width: 0.5px 0 0 0;
+  }
+  a {
+    display: block;
+    padding: 40px $gutters;
+    background-color: transparentize($black, .4);
+  }
+}
