@@ -1,5 +1,13 @@
 var express = require("express");
+var logger = require("morgan");
+var cors = require("cors");
 var app = express();
+
+app.use(logger("dev"));
+
+app.use(cors({
+  origin: "http://localhost:3000"
+}));
 
 app.get("/", function (req, res) {
   res.send("It works!");
