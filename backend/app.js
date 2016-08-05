@@ -33,27 +33,4 @@ process.on("SIGINT", () => {
   });
 });
 
-// Seed the database
-mongoose.connection.on("connected", () => {
-  require("./seed")();
-});
-
-// Error handling
-app.use((req, res, next) => {
-  var err = new Error("Not Found");
-  err.status = 404;
-  next(err);
-});
-
-if (app.get("env") === "development") {
-  app.use((err, req, res, next) => {
-    debug(err);
-    res.status(err.status || 500);
-  });
-}
-
-app.use((err, req, res, next) => {
-  res.status(err.status || 500);
-});
-
 module.exports = app;
