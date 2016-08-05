@@ -1,5 +1,11 @@
 {
   "name": "cliches-backend",
   "version": "1.0.0",
-  "private": true
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "express": "4.14.0"
+  }
 }
