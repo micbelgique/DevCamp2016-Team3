@@ -6,6 +6,10 @@ const schema = new mongoose.Schema({
     ref: "Mission",
     required: true,
     type: mongoose.Schema.Types.ObjectId
+  },
+  name: {
+    required: true,
+    type: String
   }
 }, {
   timestamps: true,
@@ -17,7 +21,7 @@ const schema = new mongoose.Schema({
 
 schema.plugin(require("mongoose-slug-hero"), {
   doc: "Exploration",
-  field: "mission.name"
+  field: "name"
 });
 
 module.exports = schema;
