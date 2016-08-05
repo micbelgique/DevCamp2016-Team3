@@ -20,6 +20,12 @@ export class MissionService {
             .catch(this._handlerError);
     }
 
+    getMission(id: string): Observable<Mission> {
+        return this._http.get(URL_MISSIONS + '/' + id)
+            .map((response: Response) => <Mission>response.json())
+            .catch(this._handlerError);
+    }
+
     _handlerError(err:any){
         console.log(err); 
         return Observable.throw(err);        

@@ -1,4 +1,4 @@
-export class Mission {   
+export class Mission {
     description: string;
     id: number;
     name: string;
