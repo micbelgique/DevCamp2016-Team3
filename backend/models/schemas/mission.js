@@ -26,7 +26,8 @@ const schema = new mongoose.Schema({
     required: true,
     type: Number
   },
-  steps: [ require("./step") ]
+  steps: [ require("./step") ],
+  illustration: String
 }, {
   timestamps: true,
   toObject: {
