@@ -1,3 +1,5 @@
+"use strict";
+
 function getExploration (req, res, next) {
   res.send("It works");
 }
