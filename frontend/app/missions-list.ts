@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { MissionListItemComponent } from './mission-list-item';
 import { Mission } from './models/mission';
+import { MissionListItemComponent } from './mission-list-item';
 import { MissionService } from './services/mission-service';
 import { Observable } from 'rxjs/Rx';
 
-// decorator function that allows us to associate metadata with the component class
 @Component({
   directives: [
     MissionListItemComponent
@@ -13,12 +12,10 @@ import { Observable } from 'rxjs/Rx';
   templateUrl: 'app/missions-list.html'
 })
 
-// we export AppComponent so that we can import it elsewhere in our application
 export class MissionsListComponent { 
 
 constructor(private _missionService: MissionService) { };
 
-    // get from service later on
     private missions: Observable<Mission[]>;
 
     ngOnInit() {
