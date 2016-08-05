@@ -17,12 +17,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Routes
-router.use("/missions", require("./routes/missions"));
-router.use("/explorations", require("./routes/explorations"));
-router.all("*", (req, res) => {
-  res.status(404).send("Not Found");
-});
-app.use("/", router);
+app.use("/", require("./routes/api"));
 
 // Mongo connection
 mongoose.connect(config.db.url, { server: { auto_reconnect: true } });
