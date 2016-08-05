@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MissionListItemComponent } from './mission-list-item';
-import { MissionSummary } from './models/mission-summary';
+import { Mission } from './models/mission';
+import { MissionService } from './services/mission-service';
+import { Observable } from 'rxjs/Rx';
 
 // decorator function that allows us to associate metadata with the component class
 @Component({
@@ -14,15 +16,19 @@ import { MissionSummary } from './models/mission-summary';
 // we export AppComponent so that we can import it elsewhere in our application
 export class MissionsListComponent { 
 
-    // get from service later on
-    private missions: MissionSummary[] = [
-        new MissionSummary("mission 1"),
-        new MissionSummary("mission 2"),
-        new MissionSummary("mission 3"),
-        new MissionSummary("mission 4"),
-        new MissionSummary("mission 5")
-    ];
+constructor(private _missionService: MissionService) { };
 
-    constructor() { }
+    // get from service later on
+    private missions: Observable<Mission[]>;
+
+    ngOnInit() {
+        this.missions = this._missionService.getMissions()
+                                .catch((err)=> {
+                                // don't do this, show the user a nice message
+                                 console.log(err);
+                                 // now we eat it, but only if the message has been communicated to the user
+                                 return Observable.of(new Array<Mission>());
+                             });
+    }
 
 }
