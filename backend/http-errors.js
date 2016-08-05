@@ -4,7 +4,8 @@ const httpErrors = {
   BadRequest: BadRequest,
   Forbidden: Forbidden,
   NotFound: NotFound,
-  Conflict: Conflict
+  Conflict: Conflict,
+  NotImplemented: NotImplemented
 };
 
 function BadRequest (message, inner) {
@@ -21,6 +22,10 @@ function NotFound (message, inner) {
 
 function Conflict (message, inner) {
   HttpError.call(this, message, inner, 409);
+}
+
+function NotImplemented (message, inner) {
+  HttpError.call(this, message, inner, 501);
 }
 
 function HttpError (message, inner, status) {
