@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { MissionsListComponent } from './missions-list';
+import { ROUTER_DIRECTIVES }  from '@angular/router';
 
 // decorator function that allows us to associate metadata with the component class
 @Component({
   directives: [
-    MissionsListComponent
+    ROUTER_DIRECTIVES
   ],
   selector: 'my-app',
   templateUrl: 'app/app.component.html'

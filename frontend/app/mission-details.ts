@@ -5,7 +5,7 @@ import { MissionDetails } from './models/mission-details';
     selector: 'mission-details',
     templateUrl: 'app/mission-details.html'
 })
-export class ComponentNameComponent implements OnInit {  
+export class MissionDetailsComponent implements OnInit {  
     
     constructor() { }
 
