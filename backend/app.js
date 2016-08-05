@@ -1,35 +1,35 @@
-var express = require("express");
-var logger = require("morgan");
-var cors = require("cors");
-var bodyParser = require("body-parser");
-var app = express();
+const express = require("express");
+const router = express.Router();
+const logger = require("morgan");
+const cors = require("cors");
+const bodyParser = require("body-parser");
+const app = express();
 
 app.use(logger("dev"));
-
-app.use(cors({
-  origin: "http://localhost:3000"
-}));
-
+app.use(cors({ origin: "http://localhost:3000" }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.get("/", function (req, res) {
-  res.send("It works!");
+router.use("/missions", require("./routes/missions"));
+router.use("/explorations", require("./routes/explorations"));
+router.all("*", (req, res) => {
+  res.status(404).send("Not Found");
 });
+app.use("/", router);
 
-app.use(function (req, res, next) {
+app.use((req, res, next) => {
   var err = new Error("Not Found");
   err.status = 404;
   next(err);
 });
 
 if (app.get("env") === "development") {
-  app.use(function (err, req, res, next) {
+  app.use((err, req, res, next) => {
     res.status(err.status || 500);
   });
 }
 
-app.use(function (err, req, res, next) {
+app.use((err, req, res, next) => {
   res.status(err.status || 500);
 });
 
