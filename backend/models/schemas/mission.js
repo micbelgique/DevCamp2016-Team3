@@ -34,4 +34,9 @@ const schema = new mongoose.Schema({
   }
 });
 
+schema.plugin(require("mongoose-slug-hero"), {
+  doc: "Mission",
+  field: "name"
+});
+
 module.exports = schema;

@@ -33,11 +33,6 @@ process.on("SIGINT", () => {
   });
 });
 
-// Seed the database
-mongoose.connection.on("connected", () => {
-  require("./seed")();
-});
-
 // Error handling
 app.use((req, res, next) => {
   var err = new Error("Not Found");
