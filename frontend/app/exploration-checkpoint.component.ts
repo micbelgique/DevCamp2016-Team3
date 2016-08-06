@@ -22,9 +22,7 @@ export class ExplorationCheckpointComponent implements OnInit {
         private appSettings: AppSettings,
         private explorationService: ExplorationService,
         private route: ActivatedRoute
-    ) {
-        
-    }
+    ) { }
 
     ngOnInit() {
         this.sub = this.route.params.subscribe(params => {

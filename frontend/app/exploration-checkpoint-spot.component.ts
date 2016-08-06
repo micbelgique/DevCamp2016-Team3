@@ -18,7 +18,8 @@ export class ExplorationCheckpointSpotComponent implements OnInit {
     constructor() { }
 
     ngOnInit() { 
-        this.isCompleted = this.exploration.completed.includes(this.checkpointSlug);
+        this.isCompleted = this.exploration.completed.some(
+            item => item.checkpoint === this.checkpointSlug
+        );
     }
-
 }
