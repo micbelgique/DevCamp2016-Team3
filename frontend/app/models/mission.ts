@@ -3,6 +3,7 @@ export class Mission {
     id: number;
     illustration: string;
     name: string;
+    slug: string;
 
     constructor() {}
 }

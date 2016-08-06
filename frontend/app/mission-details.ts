@@ -21,8 +21,8 @@ export class MissionDetailsComponent implements OnInit {
     ngOnInit() {
 
         this.sub = this._route.params.subscribe(params => {
-            if (params['id'] !== undefined) {
-                this._missionService.getMission(params['id'])
+            if (params['slug'] !== undefined) {
+                this._missionService.getMissionBySlug(params['slug'])
                     .subscribe(
                         m => this.mission = m,
                         err => this.errorMessage = err
