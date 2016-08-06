@@ -28,15 +28,19 @@ export class MissionDetailsComponent implements OnInit {
 
     goToExploration() {
 
-        //TODO: we temporarily assume here for the demo that we start a new exploration.
-        //      we should check if an uncompleted exploration already exists for this
-        //      mission
-        this._explorationService.createExploration(
-            this.mission.id, this.mission.name
-        ).subscribe(
-            exploration => this._router.navigate(['/explorations/' + exploration.slug]),
-            err => this.errorMessage = err
-        );
+        // NB: mission explorations could already been loaded in ngOnInit
+        this._explorationService.getExplorationsByMission(this.mission.id)
+            .map(explorations => {
+                if (explorations.length > 0) {
+                    this._router.navigate(['/explorations/' + explorations[0].slug])
+                } else {
+                    this._explorationService.createExploration(this.mission.id, this.mission.name)
+                        .subscribe(
+                            exploration => this._router.navigate(['/explorations/' + exploration.slug]),
+                            err => this.errorMessage = err
+                        );
+                }
+            }).subscribe();
     }
 
     goToList() {
