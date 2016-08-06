@@ -2,12 +2,13 @@
     <header>    
       <div [style.background-image]="'url(/assets/images/missions/'+ mission.illustration + ')'" style="background: #f4f4f4 no-repeat center; background-size: cover;"></div>
       <nav class="topbar">
+        <button class="back" (click)="goToList()"></button>
         <h1>{{mission.name}}</h1>
       </nav>
       <h2>{{mission.sponsor}}</h2>
       <h3>
         <div><span>1400 m</span><span>{{mission.category | category}}</span></div>
-        <div><button>ENROLL</button></div>
+        <div><button>DEMARRER</button></div>
       </h3>
     </header>
     <div class="wrap">
@@ -23,7 +24,7 @@
         <p>{{mission.introduction}}</p>
       </div>
       <div>
-        <h4>Vous allez découvrir</h4>
+        <h4>Vous découvrirez</h4>
         <p>{{mission.discovery}}</p>
       </div>
     </div>
