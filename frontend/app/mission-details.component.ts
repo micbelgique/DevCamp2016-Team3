@@ -23,8 +23,12 @@ export class MissionDetailsComponent implements OnInit {
         private _route: ActivatedRoute,
         private _router: Router) { }
 
-    goToMap() {
-        this._router.navigate(['/missions/' + this.mission.slug + '/map']);
+    goToExploration() {
+        
+        //TODO: if new exploration, create it first
+        var slug: string = 'test-test';
+        
+        this._router.navigate(['/explorations/' + slug ]);
     }
 
     goToList() {
