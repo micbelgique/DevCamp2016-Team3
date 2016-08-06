@@ -23,6 +23,10 @@ export class MissionDetailsComponent implements OnInit {
         private _route: ActivatedRoute,
         private _router: Router) { }
 
+    goToMap() {
+        this._router.navigate(['/missions/' + this.mission.slug + '/map']);
+    }
+
     goToList() {
         this._router.navigate(['/missions']);
     }

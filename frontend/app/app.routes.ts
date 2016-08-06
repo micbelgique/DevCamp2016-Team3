@@ -1,6 +1,7 @@
 import { provideRouter, RouterConfig } from '@angular/router';
 import { MissionsListComponent } from './missions-list.component';
 import { MissionDetailsComponent } from './mission-details.component';
+import { MissionMapComponent } from './mission-map.component';
 
 const routes: RouterConfig = [
     {
@@ -13,8 +14,12 @@ const routes: RouterConfig = [
         component: MissionsListComponent
     },
     {
-        path: 'mission/:slug',
+        path: 'missions/:slug',
         component: MissionDetailsComponent
+    },
+    {
+        path: 'missions/:slug/map',
+        component: MissionMapComponent
     },
 ];
 
