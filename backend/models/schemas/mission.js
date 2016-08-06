@@ -25,13 +25,20 @@ const schema = new mongoose.Schema({
   difficulty: {
     required: true,
     type: Number
-  }
+  },
+  steps: [ require("./step") ],
+  illustration: String
 }, {
   timestamps: true,
   toObject: {
     versionKey: false,
     virtuals: true
   }
+});
+
+schema.plugin(require("mongoose-slug-hero"), {
+  doc: "Mission",
+  field: "name"
 });
 
 module.exports = schema;

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { MissionSummary } from './models/mission-summary';
+import { Mission } from './models/mission';
 import { ROUTER_DIRECTIVES } from '@angular/router';
 
 @Component({
@@ -11,7 +11,7 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
 })
 export class MissionListItemComponent implements OnInit {
 
-    @Input() mission: MissionSummary;
+    @Input() mission: Mission;
 
     constructor() { }
 

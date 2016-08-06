@@ -1,7 +1,9 @@
 "use strict";
 
+const httpErrors = require("../../http-errors");
+
 function updateExploration (req, res, next) {
-  res.send("It works");
+  return next(new httpErrors.NotImplemented());
 }
 
 module.exports = updateExploration;

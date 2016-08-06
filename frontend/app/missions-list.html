@@ -1,5 +1,5 @@
-<h2>Liste des missions</h2>
-
-<ul>
-    <mission-list-item *ngFor="let miss of missions | async" [mission]="miss"></mission-list-item>
-</ul>
+<article id="missions">
+    <ol>
+        <mission-list-item *ngFor="let miss of missions | async" [mission]="miss"></mission-list-item>
+    </ol>
+</article>

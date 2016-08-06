@@ -5,8 +5,9 @@ import { Mission } from '../models/mission'
 
 import 'rxjs/add/operator/map';
 
-const URL_MISSIONS = 'app/services/missions.json';
-//const URL_MISSIONS = 'http://localhost:3000/missions';
+//const URL_MISSIONS = 'app/services/missions.json';
+const URL_MISSIONS = 'http://localhost:3001/missions';
+
 
 @Injectable()
 export class MissionService {
@@ -16,6 +17,12 @@ export class MissionService {
     getMissions(): Observable<Mission[]> {
         return this._http.get(URL_MISSIONS)
             .map((response: Response) => <Mission[]>response.json())
+            .catch(this._handlerError);
+    }
+
+    getMission(id: string): Observable<Mission> {
+        return this._http.get(URL_MISSIONS + '/' + id)
+            .map((response: Response) => <Mission>response.json())
             .catch(this._handlerError);
     }
 

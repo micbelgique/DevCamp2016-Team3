@@ -1,9 +1,8 @@
-export class Mission {   
+export class Mission {
+    description: string;
     id: number;
+    illustration: string;
     name: string;
 
-    constructor(id: number, name: string) {
-        this.id = id;
-        this.name = name;
-    }
+    constructor() {}
 }
