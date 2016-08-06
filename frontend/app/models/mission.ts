@@ -2,7 +2,7 @@ import { Checkpoint } from './checkpoint';
 
 export class Mission {
     description: string;
-    id: number;
+    id: string;
     illustration: string;
     name: string;
     slug: string;
