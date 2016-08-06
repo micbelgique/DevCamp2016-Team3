@@ -6,54 +6,10 @@
     </header>
     <div class="map">
         <ol>
-            <li class="completed">
-                <a routerLink="/explorations/test-test/checkpoints/test-test">
-                    <img src="assets/images/missions/completed-big.jpg" alt="">
-                </a>
-                <p><span>10 m</span><br> Le sauna</p>
-            </li>
-            <li class="not-completed">
-                <a routerLink="/explorations/test-test/checkpoints/test-test">
-                    <img src="assets/images/missions/not-completed-big.jpg" alt="">
-                </a>
-                <p><span>10 m</span><br> Le Hammam</p>
-            </li>
-            <li class="not-completed">
-                <a routerLink="/explorations/test-test/checkpoints/test-test">
-                    <img src="assets/images/missions/not-completed-big.jpg" alt="">
-                </a>
-                <p><span>10 m</span><br> La petite hollandaise</p>
-            </li>
-            <li class="not-completed">
-                <a routerLink="/explorations/test-test/checkpoints/test-test">
-                    <img src="assets/images/missions/not-completed-big.jpg" alt="">
-                </a>
-                <p><span>10 m</span><br> La petite allemande</p>
-            </li>
-            <li class="not-completed">
-                <a routerLink="/explorations/test-test/checkpoints/test-test">
-                    <img src="assets/images/missions/not-completed-big.jpg" alt="">
-                </a>
-                <p><span>10 m</span><br> La trompée</p>
-            </li>
-            <li class="not-completed">
-                <a routerLink="/explorations/test-test/checkpoints/test-test">
-                    <img src="assets/images/missions/not-completed-big.jpg" alt="">
-                </a>
-                <p><span>10 m</span><br> Premier tableau</p>
-            </li>
-            <li class="not-completed">
-                <a routerLink="/explorations/test-test/checkpoints/test-test">
-                    <img src="assets/images/missions/not-completed-big.jpg" alt="">
-                </a>
-                <p><span>10 m</span><br> Ha oui... ok</p>
-            </li>
-            <li class="not-completed">
-                <a routerLink="/explorations/test-test/checkpoints/test-test">
-                    <img src="assets/images/missions/not-completed-big.jpg" alt="">
-                </a>
-                <p><span>10 m</span><br> La masquotte</p>
-            </li>
+            <exploration-checkpoint-spot *ngFor="let checkpoint of exploration.mission.checkpoints" 
+                                         [exploration]="exploration" 
+                                         [checkpointSlug]="checkpoint.slug">
+            </exploration-checkpoint-spot>
         </ol>
     </div>
 </article>

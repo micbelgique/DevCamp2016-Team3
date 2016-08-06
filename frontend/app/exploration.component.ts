@@ -1,10 +1,12 @@
 import { ActivatedRoute, ROUTER_DIRECTIVES, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { Exploration } from './models/exploration';
+import { ExplorationCheckpointSpotComponent } from './exploration-checkpoint-spot';
 import { ExplorationService } from './services/explorations.service';
 
 @Component({
     directives: [
+        ExplorationCheckpointSpotComponent,
         ROUTER_DIRECTIVES
     ],
     selector: 'exploration',
