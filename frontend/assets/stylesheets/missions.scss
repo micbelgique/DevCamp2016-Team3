@@ -6,9 +6,9 @@
       padding: 60px $gutters 40px; 
     }
   }
-  li+li {
+  li {
     border: 0.5px solid $white;
-    border-width: 0.5px 0 0 0;
+    border-width: 0 0 0.5px 0;
   }
   a {
     display: block;
