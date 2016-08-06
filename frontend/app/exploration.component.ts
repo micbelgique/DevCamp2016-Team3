@@ -1,7 +1,7 @@
 import { ActivatedRoute, ROUTER_DIRECTIVES, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { Exploration } from './models/exploration';
-import { ExplorationCheckpointSpotComponent } from './exploration-checkpoint-spot';
+import { ExplorationCheckpointSpotComponent } from './exploration-checkpoint-spot.component';
 import { ExplorationService } from './services/explorations.service';
 
 @Component({
