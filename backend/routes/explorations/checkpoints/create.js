@@ -30,9 +30,9 @@ function createExplorationCheckpoint (req, res, next) {
     }
 
     exploration.completed.push({
-        checkpoint: req.params.slug2, // TODO: we should save the ID, not the slug
-        file: req.file.filename
-      });
+      checkpoint: req.params.slug2, // TODO: we should save the ID, not the slug
+      file: req.file.filename
+    });
 
     return exploration.save();
   }

@@ -1,6 +1,7 @@
 "use strict";
 
 const express = require("express");
+const path = require("path");
 const router = express.Router();
 const logger = require("morgan");
 const cors = require("cors");
@@ -15,6 +16,7 @@ app.use(logger(config.logger.format));
 app.use(cors(config.cors));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 // Routes
 app.use("/", require("./routes/api"));
