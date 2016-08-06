@@ -1,7 +1,4 @@
-Exploration checkpoint<br>
-Upload your file !!!!!!!!!!!
-
-<!--<form enctype="multipart/form-data">-->
+<div *ngIf="exploration">
   <input type="file" ng2FileSelect [uploader]="uploader" />
   <br/>
   <br/>
@@ -9,4 +6,4 @@ Upload your file !!!!!!!!!!!
   <button type="button" (click)="uploader.uploadAll()" [disabled]="!uploader.getNotUploadedItems().length">
     Upload all
   </button>
-<!--</form>-->
+</div>
