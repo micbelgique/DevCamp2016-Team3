@@ -5,6 +5,7 @@ const httpErrors = require("../../http-errors");
 
 function getExploration (req, res, next) {
   Exploration.findBySlug({ slug: req.params.slug })
+    .populate("mission")
     .then(ensureExplorationExists)
     .then(sendResponse)
     .catch(next)
