@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy} from '@angular/core';
 import { Mission } from './models/mission';
 import { MissionService } from './services/mission-service';
 import { Observable } from 'rxjs/Rx';
-import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, ROUTER_DIRECTIVES, Router } from '@angular/router';
 
 @Component({
     selector: 'mission-details',
@@ -16,7 +16,12 @@ export class MissionDetailsComponent implements OnInit {
 
     constructor(
         private _missionService: MissionService,
-        private _route: ActivatedRoute) { }
+        private _route: ActivatedRoute,
+        private _router: Router) { }
+
+    goToList() {
+        this._router.navigate(['/missions']);
+    }
 
     ngOnInit() {
 
@@ -24,9 +29,9 @@ export class MissionDetailsComponent implements OnInit {
             if (params['slug'] !== undefined) {
                 this._missionService.getMissionBySlug(params['slug'])
                     .subscribe(
-                        m => this.mission = m,
-                        err => this.errorMessage = err
-                    );                    
+                    m => this.mission = m,
+                    err => this.errorMessage = err
+                    );
             }
         });
     }
@@ -34,5 +39,7 @@ export class MissionDetailsComponent implements OnInit {
     ngOnDestroy() {
         this.sub.unsubscribe();
     }
+
+
 
 }

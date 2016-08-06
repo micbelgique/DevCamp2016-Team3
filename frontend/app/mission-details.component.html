@@ -1,11 +1,11 @@
-   <article id="details"> 
+   <article *ngIf="mission" id="details"> 
     <header>    
-      <div  style="background: #f4f4f4 url(assets/images/missions/ovifat.jpg) no-repeat center; background-size: cover;"></div>
+      <div  [style.background-image]="'url(/assets/images/missions/'+ mission.illustration + ')'" style="background: #f4f4f4 no-repeat center; background-size: cover;"></div>
       <nav class="topbar">
-        <button class="back"></button>
-        <h1>Ofivat Wealness</h1>
+        <button class="back" (click)="goToList()" ></button>
+        <h1>{{mission.name}}</h1>
       </nav>
-      <h2>By Domaines des Hautes Fagnes </h2>
+      <h2>By {{mission.sponsor}} </h2>
       <h3>
         <div><span>1400 m</span><span>Zen</span></div>
         <div><button>ENROLL</button></div>
