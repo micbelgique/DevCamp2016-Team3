@@ -16,4 +16,9 @@ const schema = new mongoose.Schema({
   }
 });
 
+schema.plugin(require("mongoose-slug-hero"), {
+  doc: "Checkpoint",
+  field: "title"
+});
+
 module.exports = schema;

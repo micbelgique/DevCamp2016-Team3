@@ -11,7 +11,7 @@ const schema = new mongoose.Schema({
     required: true,
     type: String
   },
-  completed: [ { type: mongoose.Schema.Types.ObjectId } ]
+  completed: [ { type: String } ]
 }, {
   timestamps: true,
   toObject: {
