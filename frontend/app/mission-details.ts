@@ -10,7 +10,8 @@ import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
 })
 export class MissionDetailsComponent implements OnInit {
 
-    private mission: Observable<Mission>;
+    private errorMessage: string;
+    private mission: Mission;
     private sub: any;
 
     constructor(
@@ -21,12 +22,11 @@ export class MissionDetailsComponent implements OnInit {
 
         this.sub = this._route.params.subscribe(params => {
             if (params['id'] !== undefined) {
-                this.mission = this._missionService.getMission(params['id'])
-                    .catch((err) => {
-                        console.log(err);
-                        // now we eat it, but only if the message has been communicated to the user
-                        return Observable.of(null);
-                    });
+                this._missionService.getMission(params['id'])
+                    .subscribe(
+                        m => this.mission = m,
+                        err => this.errorMessage = err
+                    );                    
             }
         });
     }
