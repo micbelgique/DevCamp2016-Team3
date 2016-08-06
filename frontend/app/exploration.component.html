@@ -1,3 +1,15 @@
-Explore me !!!!!!!!!!!!!! I feel desperately alone....<br>
-
-<button (click)="goToCheckpoint()">Go to checkpoint 1</button>
+<article id="hunting">
+    <header>
+        <nav class="topbar">
+            <button class="back" (click)="goToMission()"></button>
+        </nav>
+    </header>
+    <div class="map">
+        <ol>
+            <exploration-checkpoint-spot *ngFor="let checkpoint of exploration.mission.checkpoints" 
+                                         [exploration]="exploration" 
+                                         [checkpointSlug]="checkpoint.slug">
+            </exploration-checkpoint-spot>
+        </ol>
+    </div>
+</article>

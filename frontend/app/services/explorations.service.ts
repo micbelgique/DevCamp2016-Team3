@@ -13,22 +13,38 @@ export class ExplorationService {
     constructor(private http: Http) { }
 
     createExploration(missionId: string, name: string): Observable<Exploration> {
-      return this.http.post(URL_EXPLORATIONS, {
-        mission: missionId,
-        name: name
-      })
-        .map((response: Response) => <Exploration>response.json())
-        .catch(this.handlerError);
-    }
-
-    getExploration(name: string): Observable<Exploration> {
-        return this.http.get(URL_EXPLORATIONS)
+        return this.http.post(URL_EXPLORATIONS, {
+            mission: missionId,
+            name: name
+        })
             .map((response: Response) => <Exploration>response.json())
             .catch(this.handlerError);
     }
 
-    private handlerError(err:any){
-        console.log(err); 
-        return Observable.throw(err);        
+    getExplorationBySlug(slug: string): Observable<Exploration> {
+        return this.http.get(URL_EXPLORATIONS + '/' + slug)
+            .map((response: Response) => <Exploration>response.json())
+            .catch(this.handlerError);
+    }
+
+    getExplorations(): Observable<Exploration[]> {
+        return this.http.get(URL_EXPLORATIONS)
+            .map((response: Response) => <Exploration[]>response.json())
+            .catch(this.handlerError);
+    }
+
+    getExplorationsByMission(missionId: string): Observable<Exploration[]> {
+        return this.http.get(URL_EXPLORATIONS)
+            .map((response: Response) => {
+                                        var exps: Exploration[] = <Exploration[]>response.json();
+                                        exps = exps.filter(e =>e.mission.id == missionId );
+                                        return exps;
+                                        })
+            .catch(this.handlerError);
+    }
+
+    private handlerError(err: any) {
+        console.log(err);
+        return Observable.throw(err);
     }
 }
