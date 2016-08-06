@@ -1,7 +1,4 @@
 <h4>Checkpoints to be completed</h4>
-  <ol class="roll">
-    <li class="completed"><img src="assets/images/business/completed.jpg" alt=""></li>
-    <li><img src="assets/images/business/placeholder.jpg" alt=""></li>
-    <li><img src="assets/images/business/placeholder.jpg" alt=""></li>
-    <li><img src="assets/images/business/placeholder.jpg" alt=""></li>
-  </ol>
+<ol class="roll">
+  <checkpoint-list-item *ngFor="let item of checkpoints" [checkpoint]="item"></checkpoint-list-item>
+</ol>
