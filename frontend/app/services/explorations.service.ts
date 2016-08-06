@@ -21,8 +21,8 @@ export class ExplorationService {
             .catch(this.handlerError);
     }
 
-    getExploration(name: string): Observable<Exploration> {
-        return this.http.get(URL_EXPLORATIONS)
+    getExplorationBySlug(slug: string): Observable<Exploration> {
+        return this.http.get(URL_EXPLORATIONS + '/' + slug)
             .map((response: Response) => <Exploration>response.json())
             .catch(this.handlerError);
     }
