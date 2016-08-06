@@ -2,18 +2,17 @@ import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 import { Exploration } from '../models/exploration'
-
 import 'rxjs/add/operator/map';
 
-const URL_EXPLORATIONS = 'http://localhost:3001/explorations';
+import { AppSettings } from "../app.settings";
 
 @Injectable()
 export class ExplorationService {
 
-    constructor(private http: Http) { }
+    constructor(private appSettings: AppSettings, private http: Http) { }
 
     createExploration(missionId: string, name: string): Observable<Exploration> {
-      return this.http.post(URL_EXPLORATIONS, {
+      return this.http.post(`${this.appSettings.baseUrl}/explorations`, {
         mission: missionId,
         name: name
       })
@@ -22,7 +21,7 @@ export class ExplorationService {
     }
 
     getExploration(name: string): Observable<Exploration> {
-        return this.http.get(URL_EXPLORATIONS)
+        return this.http.get(`${this.appSettings.baseUrl}/explorations`)
             .map((response: Response) => <Exploration>response.json())
             .catch(this.handlerError);
     }

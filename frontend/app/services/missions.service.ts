@@ -2,26 +2,23 @@ import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 import { Mission } from '../models/mission'
-
 import 'rxjs/add/operator/map';
 
-//const URL_MISSIONS = 'app/services/missions.json';
-const URL_MISSIONS = 'http://localhost:3001/missions';
-
+import { AppSettings } from "../app.settings";
 
 @Injectable()
 export class MissionService {
 
-    constructor(private _http: Http) { }
+    constructor(private appSettings: AppSettings, private http: Http) { }
 
     getMissions(): Observable<Mission[]> {
-        return this._http.get(URL_MISSIONS)
+        return this.http.get(`${this.appSettings.baseUrl}/missions`)
             .map((response: Response) => <Mission[]>response.json())
             .catch(this._handlerError);
     }
 
     getMissionBySlug(slug: string): Observable<Mission> {
-        return this._http.get(URL_MISSIONS + '/' + slug)
+        return this.http.get(`${this.appSettings.baseUrl}/missions/${slug}`)
             .map((response: Response) => <Mission>response.json())
             .catch(this._handlerError);
     }
