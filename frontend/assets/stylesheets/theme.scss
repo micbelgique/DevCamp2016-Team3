@@ -109,6 +109,13 @@ article::-webkit-scrollbar {
   width: 0 !important;
 }
 
+// SPLASH
+
+#splash {
+  background: $black url(../images/logo.png) no-repeat center center;
+  background-size: 50%;
+}
+
 // MISSIONS
 
 #missions {
