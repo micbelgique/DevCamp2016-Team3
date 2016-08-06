@@ -17,8 +17,9 @@ import { MissionService } from './services/missions.service';
 })
 export class MissionDetailsComponent implements OnInit {
 
+    goToExplorationLabel: String = "DEMARRER";
     private errorMessage: string;
-    private exploration: Exploration = null;
+    private exploration: Exploration;
     private mission: Mission;
     private sub: any;
 
@@ -58,6 +59,7 @@ export class MissionDetailsComponent implements OnInit {
                             explorations => {
                                 if (explorations.length > 0) {
                                     this.exploration = explorations[0];
+                                    this.goToExplorationLabel = "CONTINUER";
                                 }
                             },
                             err => this.errorMessage = err
