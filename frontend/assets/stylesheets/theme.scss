@@ -133,6 +133,25 @@ article::-webkit-scrollbar {
     padding: 40px $gutters;
     background-color: transparentize($black, .4);
   }
+  h2 {
+    span {
+    padding-left: 14px;
+  }
+  span:first-child {
+    background: url(../images/geo.svg) no-repeat left center;
+    background-size: 10px;
+    &+span{
+      background: url(../images/badge.svg) no-repeat left center;
+      background-size: 10px;
+      margin-left: 14px;
+      &+span{
+        background: url(../images/flag.svg) no-repeat left center;
+        background-size: 10px;
+        margin-left: 14px;
+      }
+    }
+  }
+  }
 }
 
 // DETAILS
