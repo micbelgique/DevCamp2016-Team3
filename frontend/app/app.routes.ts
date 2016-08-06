@@ -13,7 +13,7 @@ const routes: RouterConfig = [
         component: MissionsListComponent
     },
     {
-        path: 'mission/:id',
+        path: 'mission/:slug',
         component: MissionDetailsComponent
     },
 ];

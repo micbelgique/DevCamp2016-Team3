@@ -20,8 +20,8 @@ export class MissionService {
             .catch(this._handlerError);
     }
 
-    getMission(id: string): Observable<Mission> {
-        return this._http.get(URL_MISSIONS + '/' + id)
+    getMissionBySlug(slug: string): Observable<Mission> {
+        return this._http.get(URL_MISSIONS + '/' + slug)
             .map((response: Response) => <Mission>response.json())
             .catch(this._handlerError);
     }
