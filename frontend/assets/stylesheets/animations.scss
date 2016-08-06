@@ -86,7 +86,7 @@ em {
 }
 
 @include keyframes (loading) {
-  0%{
+  0% {
     transform: rotate(360deg);
   }
   100% {
