@@ -1,7 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Exploration } from './models/exploration';
+import { ROUTER_DIRECTIVES } from '@angular/router';
 
 @Component({
+    directives:[
+        ROUTER_DIRECTIVES
+    ],
     selector: 'exploration-checkpoint-spot',
     templateUrl: 'app/exploration-checkpoint-spot.component.html'
 })
