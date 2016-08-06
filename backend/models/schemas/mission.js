@@ -10,12 +10,24 @@ const schema = new mongoose.Schema({
     required: true,
     type: String
   },
+  introduction: {
+    required: true,
+    type: String
+  },
+  discovery: {
+    required: true,
+    type: String
+  },
   place: {
     required: true,
     type: String
   },
   sponsor: {
     required: true,
+    type: String
+  },
+  category: {
+    enum: Object.keys(require("./categories")),
     type: String
   },
   rating: {
@@ -26,7 +38,7 @@ const schema = new mongoose.Schema({
     required: true,
     type: Number
   },
-  steps: [ require("./step") ],
+  checkpoints: [ require("./checkpoint") ],
   illustration: String
 }, {
   timestamps: true,
