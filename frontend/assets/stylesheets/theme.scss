@@ -138,3 +138,29 @@ article {
 article::-webkit-scrollbar { 
   width: 0 !important;
 }
+
+#splash {
+  background: $black url(../images/logo.png) no-repeat center 40%;
+  background-size: 150px;
+  span {
+    position: absolute;
+    z-index: 40;
+    bottom: calc(20% - 25px);
+    left: calc(50% - 25px);
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    &:before {
+      position: absolute;
+      top: calc(50% - 13px);
+      left: calc(50% - 13px);
+      display: block;
+      content: '';
+      width: 20px;
+      height: 20px;
+      @include border-radius(14px);
+      border: 3px solid transparentize($white, .7);
+      border-right-color: $white;
+    }
+  }
+}
