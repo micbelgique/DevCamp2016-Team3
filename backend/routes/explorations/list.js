@@ -4,6 +4,7 @@ const Exploration = require("../../models/exploration");
 
 function listExplorations (req, res, next) {
   Exploration.find({})
+    .populate("mission")
     .then(sendResponse)
     .catch(next)
   ;
