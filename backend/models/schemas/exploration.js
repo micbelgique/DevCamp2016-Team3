@@ -10,7 +10,8 @@ const schema = new mongoose.Schema({
   name: {
     required: true,
     type: String
-  }
+  },
+  completed: [ { type: mongoose.Schema.Types.ObjectId } ]
 }, {
   timestamps: true,
   toObject: {
