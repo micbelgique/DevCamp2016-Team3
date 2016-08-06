@@ -12,6 +12,15 @@ export class ExplorationService {
 
     constructor(private http: Http) { }
 
+    createExploration(missionId: string, name: string): Observable<Exploration> {
+      return this.http.post(URL_EXPLORATIONS, {
+        mission: missionId,
+        name: name
+      })
+        .map((response: Response) => <Exploration>response.json())
+        .catch(this.handlerError);
+    }
+
     getExploration(name: string): Observable<Exploration> {
         return this.http.get(URL_EXPLORATIONS)
             .map((response: Response) => <Exploration>response.json())
