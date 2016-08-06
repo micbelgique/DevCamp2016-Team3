@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Mission } from './models/mission';
-import { MissionListItemComponent } from './mission-list-item';
+import { MissionListItemComponent } from './mission-list-item.component';
 import { MissionService } from './services/mission-service';
 import { Observable } from 'rxjs/Rx';
 
@@ -9,7 +9,7 @@ import { Observable } from 'rxjs/Rx';
     MissionListItemComponent
   ],
   selector: 'missions-list',
-  templateUrl: 'app/missions-list.html'
+  templateUrl: 'app/missions-list.component.html'
 })
 
 export class MissionsListComponent { 

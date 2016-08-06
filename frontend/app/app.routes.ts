@@ -1,6 +1,6 @@
 import { provideRouter, RouterConfig } from '@angular/router';
-import { MissionsListComponent } from './missions-list';
-import { MissionDetailsComponent } from './mission-details';
+import { MissionsListComponent } from './missions-list.component';
+import { MissionDetailsComponent } from './mission-details.component';
 
 const routes: RouterConfig = [
     {

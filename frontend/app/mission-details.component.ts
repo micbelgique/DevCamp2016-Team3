@@ -6,7 +6,7 @@ import { ROUTER_DIRECTIVES, ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: 'mission-details',
-    templateUrl: 'app/mission-details.html'
+    templateUrl: 'app/mission-details.component.html'
 })
 export class MissionDetailsComponent implements OnInit {
 

@@ -7,7 +7,7 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
         ROUTER_DIRECTIVES
     ],
     selector: 'mission-list-item',
-    templateUrl: 'app/mission-list-item.html'
+    templateUrl: 'app/mission-list-item.component.html'
 })
 export class MissionListItemComponent implements OnInit {
 
