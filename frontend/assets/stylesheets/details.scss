@@ -84,22 +84,50 @@
   }
 
   .roll {
-    display: flex;
-    justify-content: space-between;
     padding: 0 $gutters;
     li {
-      @include border-radius(50%);
+      position: relative;
+      line-height: 0;
+      &:after {
+        display: block;
+        position: absolute;
+        left: 24px;
+        content: '';
+        width: 2px;
+        height: 20px;
+        background-color: transparentize($black, .8);
+      }
+      &:last-child {
+        &:after {
+          display: none;
+        }
+      }
+      & + li {
+        padding-top: 20px;
+        span {
+          top: 44px;
+        }
+      }
     }
     img {
       opacity: .2;
       @include border-radius(50%);
       border: 2px solid transparentize($black, 0); 
-      width: 60px;
+      width: 50px;
+    }
+    span {
+      position: absolute;
+      top: 24px;
+      left: 60px;
+      color: transparentize($black, .5);
     }
     .completed {
       img {
         opacity: 1; 
         border-color: $black;
+      }
+      span {
+        color: $black;
       }
     }
   }
