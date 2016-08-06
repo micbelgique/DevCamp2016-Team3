@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Mission } from './models/mission';
 import { MissionListItemComponent } from './mission-list-item.component';
-import { MissionService } from './services/mission-service';
+import { MissionService } from './services/missions.service';
 import { Observable } from 'rxjs/Rx';
 
 @Component({

@@ -1,5 +1,5 @@
 <li  [style.background-image]="'url(/assets/images/missions/'+ mission.illustration + ')'" style="background: #f4f4f4 no-repeat center; background-size: cover;">
-    <a [routerLink]="['/mission', mission.slug]">
+    <a [routerLink]="['/missions', mission.slug]">
         <h1>{{mission.name}}</h1>
         <h2><span>1400 m</span><span>{{mission.category | category}}</span></h2>
     </a>

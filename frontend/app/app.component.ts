@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { HTTP_PROVIDERS } from '@angular/http';
-import { MissionService } from './services/mission-service';
 import { ROUTER_DIRECTIVES }  from '@angular/router';
+
+import { ExplorationService } from './services/explorations.service';
+import { MissionService } from './services/missions.service';
 
 // decorator function that allows us to associate metadata with the component class
 @Component({
@@ -9,6 +11,7 @@ import { ROUTER_DIRECTIVES }  from '@angular/router';
     ROUTER_DIRECTIVES
   ],
   providers: [
+    ExplorationService,
     HTTP_PROVIDERS,
     MissionService
   ],

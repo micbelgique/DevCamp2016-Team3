@@ -1,0 +1,116 @@
+// HUNTING
+
+#hunting {
+	overflow: auto;
+	background-color: transparentize($black, .99);
+	.topbar {
+		position: fixed;
+		z-index: 20;
+		top: 0;
+	}
+	.back {
+		&:before {
+			border-color: $white;
+		}
+		&:after {
+			background-color: transparentize($black, .9);
+		}
+		&:active {
+			&:after {
+				opacity: 1;
+			}
+		}
+	}
+	.map {
+		height: 100vh;
+		width: 400vw;
+		ol {
+			display: flex;
+			flex-wrap: wrap;
+			background: url(../images/map.jpg) no-repeat center center;
+		}
+		li {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			flex-grow: 1;
+			height: 100vh;
+			width: 100vw;
+			background-color: transparentize($black, .6);
+			a {
+				position: relative;
+				display: block;
+				width: 100px;
+				height: 100px;
+				@include border-radius(50%);
+				background-color: $white;
+				box-shadow: 0px 0px 5px 0 rgba(0,0,0,.15);
+				&:after {
+					z-index: 0;
+					@include rotate(45deg);
+					bottom: -5px;
+					left: calc(50% - 10px);
+					display: block;
+					content: '';
+					width: 20px;
+					height: 20px;
+					@include border-radius(2px);
+					position: absolute;
+					background-color: $white;
+				}
+			}
+			img {
+				position: absolute;
+				z-index: 1;
+				margin: 3px;
+				@include border-radius(50%);
+				width: calc(100% - 6px);
+			}
+			p {
+				margin-top: 10px;
+				padding: 10px;
+				color: $white;
+				text-align: center;
+				line-height: 1.3rem;
+				text-shadow: 0 0 4px rgba(0,0,0,.5);
+				span {
+					padding-left: 15px;
+					background: url(../images/geo.svg) no-repeat left center;
+    			background-size: 10px;
+				}
+			}
+			&.completed {
+				a {
+					&:after {
+						display: none;
+					}
+					&:before {
+						@include rotate(20deg);
+						position: absolute;
+						top: -20px;
+						right: 0;
+						z-index: 0;
+						display: block;
+						content: '';
+						width: 30px;
+						height: 30px;
+						background: url(../images/flag.svg) no-repeat center center;
+						background-size: 22px;
+					}
+				}
+				p {
+					margin-top: 0;
+				}
+			}
+			&.not-completed {
+				img {
+					opacity: .3;
+				}
+				a {
+					position: relative;
+				}
+			}
+		}
+	}
+}
