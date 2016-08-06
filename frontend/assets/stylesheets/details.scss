@@ -84,10 +84,16 @@
   }
 
   .roll {
+    overflow: hidden;
+    margin-top: -20px;
     padding: 0 $gutters;
     li {
       position: relative;
       line-height: 0;
+      padding-top: 20px;
+      span {
+        top: 44px;
+      }
       &:after {
         display: block;
         position: absolute;
@@ -96,17 +102,6 @@
         width: 2px;
         height: 20px;
         background-color: transparentize($black, .8);
-      }
-      &:last-child {
-        &:after {
-          display: none;
-        }
-      }
-      & + li {
-        padding-top: 20px;
-        span {
-          top: 44px;
-        }
       }
     }
     img {
