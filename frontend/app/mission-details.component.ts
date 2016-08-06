@@ -3,10 +3,12 @@ import { Mission } from './models/mission';
 import { MissionService } from './services/mission-service';
 import { Observable } from 'rxjs/Rx';
 import { ActivatedRoute, ROUTER_DIRECTIVES, Router } from '@angular/router';
+import { CategoryPipe } from './pipes/category.pipe';
 
 @Component({
     selector: 'mission-details',
-    templateUrl: 'app/mission-details.component.html'
+    templateUrl: 'app/mission-details.component.html',
+    pipes: [CategoryPipe]
 })
 export class MissionDetailsComponent implements OnInit {
 

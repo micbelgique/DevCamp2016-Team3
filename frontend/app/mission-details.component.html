@@ -1,20 +1,19 @@
    <article *ngIf="mission" id="details"> 
     <header>    
-      <div  [style.background-image]="'url(/assets/images/missions/'+ mission.illustration + ')'" style="background: #f4f4f4 no-repeat center; background-size: cover;"></div>
+      <div [style.background-image]="'url(/assets/images/missions/'+ mission.illustration + ')'" style="background: #f4f4f4 no-repeat center; background-size: cover;"></div>
       <nav class="topbar">
-        <button class="back" (click)="goToList()" ></button>
         <h1>{{mission.name}}</h1>
       </nav>
-      <h2>By {{mission.sponsor}} </h2>
+      <h2>{{mission.sponsor}}</h2>
       <h3>
-        <div><span>1400 m</span><span>Zen</span></div>
+        <div><span>1400 m</span><span>{{mission.category | category}}</span></div>
         <div><button>ENROLL</button></div>
       </h3>
     </header>
     <div class="wrap">
       <div>
         <h4>Description</h4>
-        <p>Petit parcours dans le domaine à la recherche des endroits les plus Zen des Ardennes
+        <p>{{mission.description}}</p>
       </div>
       <div>
         <h4>Checkpoints to be completed</h4>
@@ -27,11 +26,11 @@
       </div>
       <div>
         <h4>Votre mission</h4>
-        <p>Petit parcours dans le domaine à la recherche des endroits les plus Zen des Ardennes
+        <p>{{mission.introduction}}</p>
       </div>
       <div>
         <h4>Vous allez découvrir</h4>
-        <p>Petit parcours dans le domaine à la recherche des endroits les plus Zen des Ardennes
+        <p>{{mission.discovery}}</p>
       </div>
     </div>
   </article>
