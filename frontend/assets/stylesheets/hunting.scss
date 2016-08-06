@@ -28,6 +28,7 @@
 			display: flex;
 			flex-wrap: wrap;
 			background: url(../images/map.jpg) no-repeat center center;
+			background-size: cover;
 		}
 		li {
 			display: flex;
@@ -114,3 +115,6 @@
 		}
 	}
 }
+
+
+
