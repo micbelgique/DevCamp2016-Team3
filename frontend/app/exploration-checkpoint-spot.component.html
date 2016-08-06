@@ -1,0 +1,6 @@
+<li [class]="isCompleted ? 'completed' : 'not-completed'">
+    <a [routerLink]="['/explorations', exploration.slug, 'checkpoints', checkpointSlug]" >
+        <img [src]="isCompleted ? 'assets/images/missions/completed-big.jpg' : 'assets/images/missions/not-completed-big.jpg'" alt="">
+    </a>
+    <p><span>10 m</span><br> {{checkpointSlug}}</p>
+</li>
