@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ExplorationService } from './services/explorations.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,7 +8,9 @@ import { Router } from '@angular/router';
 })
 export class ExplorationComponent implements OnInit {
 
-    constructor(private _router: Router) { }
+    constructor(
+        private _explorationService: ExplorationService,
+        private _router: Router) { }
 
     goToCheckpoint() {
         this._router.navigate(['/explorations/test-test/checkpoints/test-test']);

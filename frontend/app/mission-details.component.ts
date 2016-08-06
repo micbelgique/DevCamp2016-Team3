@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy} from '@angular/core';
 import { Mission } from './models/mission';
-import { MissionService } from './services/mission-service';
+import { MissionService } from './services/missions.service';
 import { Observable } from 'rxjs/Rx';
 import { ActivatedRoute, ROUTER_DIRECTIVES, Router } from '@angular/router';
 import { CheckpointListComponent } from './checkpoint-list.component';
