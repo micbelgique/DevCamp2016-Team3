@@ -1,4 +1,4 @@
-   <article *ngIf="mission" id="details"> 
+   <article *ngIf="hasLoaded" id="details"> 
     <header>    
       <div [style.background-image]="'url(/assets/images/missions/'+ mission.illustration + ')'" style="background: #f4f4f4 no-repeat center; background-size: cover;"></div>
       <nav class="topbar">
@@ -7,7 +7,7 @@
       </nav>
       <h2>{{mission.sponsor}}</h2>
       <h3>
-        <div><span>1400 m</span><span>{{mission.category | category}}</span></div>
+        <div><span>{{mission.place}}</span><span>{{mission.category | category}}</span></div>
         <div><button (click)="goToExploration()">{{goToExplorationLabel}}</button></div>
       </h3>
     </header>
@@ -17,7 +17,7 @@
         <p>{{mission.description}}</p>
       </div>
       <div>
-        <checkpoint-list *ngIf="exploration" [checkpoints]="mission.checkpoints" [exploration]="exploration"></checkpoint-list>
+        <checkpoint-list [checkpoints]="mission.checkpoints" [exploration]="exploration"></checkpoint-list>
       </div>
       <div>
         <h4>Votre mission</h4>

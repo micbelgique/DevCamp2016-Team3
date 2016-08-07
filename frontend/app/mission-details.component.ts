@@ -18,6 +18,8 @@ import { MissionService } from './services/missions.service';
 export class MissionDetailsComponent implements OnInit {
 
     goToExplorationLabel: String = "DEMARRER";
+    hasLoaded: Boolean;
+
     private errorMessage: string;
     private exploration: Exploration;
     private mission: Mission;
@@ -61,6 +63,8 @@ export class MissionDetailsComponent implements OnInit {
                                     this.exploration = explorations[0];
                                     this.goToExplorationLabel = "CONTINUER";
                                 }
+
+                                this.hasLoaded = true;
                             },
                             err => this.errorMessage = err
                             );
