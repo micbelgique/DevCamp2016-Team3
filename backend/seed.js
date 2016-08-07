@@ -69,9 +69,9 @@ function createOvifatMission () {
             "placeholder": "005.jpg"
         },
         {
-            "title": "Step #6",
-            "description": "Bla bla...",
-            "trivia": "C'est Martine qui a posée pour réaliser cette oeuvre d'art en 2012 lors de la première édition du DevCamp.",
+            "title": "Le vertige",
+            "description": "Cet équilibre qui étourdit la raison sur un plaisir des sens retrouvés.",
+            "trivia": "La chute d'Icare n'est qu'un prémisse d'une vie trépidante",
             "placeholder": "006.jpg"
         },
         {
