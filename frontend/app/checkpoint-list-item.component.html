@@ -1,4 +1,4 @@
-<li [class]="isCompleted ? 'completed' : ''">
+<li [class]="isCompleted ? 'completed' : ''" (click)="goToCheckpoint()">
   <img [src]="imageSrc" alt="">
   <span>{{checkpoint.title}}</span>
 </li>

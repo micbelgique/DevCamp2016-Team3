@@ -55,7 +55,12 @@ export class ExplorationCheckpointComponent implements OnInit {
                                 form.append("checkpoint", this.checkpointSlug);
                             };
                             this.uploader.onCompleteItem = () => {
-                                this.router.navigate([`/missions/${this.exploration.mission.slug}/congratulations`]);
+                                if (this.checkpoint.slug === "pour-demo") {
+                                    this.router.navigate([`/missions/${this.exploration.mission.slug}/congratulations`]);
+                                }
+                                else {
+                                    this.sub.next(params);
+                                }
                             }
 
                             const completed = this.exploration.completed.filter(
@@ -73,13 +78,6 @@ export class ExplorationCheckpointComponent implements OnInit {
                     );
             }
         });
-
-        this.timeout = setInterval(() => {
-            if (this.uploader.getNotUploadedItems().length > 0) {
-                this.uploader.uploadAll();
-                clearTimeout(this.timeout);
-            }
-        }, 250);
     }
 
     ngOnDestroy() {
@@ -87,6 +85,15 @@ export class ExplorationCheckpointComponent implements OnInit {
     }
 
     browse () {
+        this.timeout = setInterval(() => {
+            if (this.uploader.getNotUploadedItems().length > 0) {
+                setTimeout(() => {
+                this.uploader.uploadAll();
+                }, 1500);
+                clearTimeout(this.timeout);
+            }
+        }, 250);
+
         document.getElementById("fileUploader").click();
     }
 }

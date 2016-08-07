@@ -1,3 +1,4 @@
+import { ActivatedRoute, ROUTER_DIRECTIVES, Router } from '@angular/router';
 import { Component, Input, OnInit } from '@angular/core';
 import { Checkpoint } from './models/checkpoint';
 import { Exploration } from './models/exploration';
@@ -14,7 +15,7 @@ export class CheckpointListItemComponent implements OnInit {
 
   isCompleted: Boolean;
   
-  constructor(private appSettings: AppSettings) { }
+  constructor(private appSettings: AppSettings, private router: Router) { }
 
   ngOnInit() {
       const completed = this.exploration && this.exploration.completed.filter(
@@ -27,6 +28,9 @@ export class CheckpointListItemComponent implements OnInit {
       {
           this.imageSrc = `${this.appSettings.baseUrl}/uploads/${completed[0].file}`;
       }
-    
+  }
+
+  goToCheckpoint () {
+      this.router.navigate([`/explorations/${this.exploration.slug}/checkpoints/${this.checkpoint.slug}`])
   }
 }

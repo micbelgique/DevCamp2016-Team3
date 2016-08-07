@@ -11,7 +11,6 @@ const schema = new mongoose.Schema({
     type: String
   },
   trivia: {
-    required: true,
     type: String
   },
   placeholder: {

@@ -39,22 +39,58 @@ function createOvifatMission () {
     "checkpoints":
     [
         {
-            "title": "Step #1",
-            "description": "Bla bla...",
-            "trivia": "C'est Martine qui a posée pour réaliser cette oeuvre d'art en 2012 lors de la première édition du DevCamp.",
+            "title": "L'innocence du plaisir",
+            "description": "Instantané du plaisir des vacances retrouvées. Un moment de détente sur l'embrun d'une eau s'apaisant",
+            "trivia": "Les carpes s'en souviennent.",
             "placeholder": "001.jpg"
         },
         {
-            "title": "Step #2",
-            "description": "Bla bla...",
-            "trivia": "C'est Martine qui a posée pour réaliser cette oeuvre d'art en 2012 lors de la première édition du DevCamp.",
+            "title": "En équilibre",
+            "description": "L'expérience forge le caractère et la chance sourit aux audacieux.",
+            "trivia": "On ne saura jamais s'il y avait des ortilles.",
             "placeholder": "002.jpg"
         },
         {
-            "title": "Step #3",
-            "description": "Bla bla...",
-            "trivia": "C'est Martine qui a posée pour réaliser cette oeuvre d'art en 2012 lors de la première édition du DevCamp.",
+            "title": "Vive le sport",
+            "description": "Rien de telle que le soleil matinal sur une rosée naissante pour se balader sur des sentiers boisés.",
+            "trivia": "Mens sana in corpore sano.",
             "placeholder": "003.jpg"
+        },
+        {
+            "title": "Hésitation",
+            "description": "Est-ce que j'avance ou je recule? Le sport n'est peut-être qu'un prétexte.",
+            "trivia": "Le vélo s'en souvient.",
+            "placeholder": "004.jpg"
+        },
+        {
+            "title": "Entre danse et Tai Chi",
+            "description": "Les étendues verdoyantes sont toujours propices à l'élégance d'une danse champêtre",
+            "trivia": "Le centre du monde.",
+            "placeholder": "005.jpg"
+        },
+        {
+            "title": "Le vertige",
+            "description": "Cet équilibre qui étourdit la raison sur un plaisir des sens retrouvés.",
+            "trivia": "La chute d'Icare n'est qu'un prémisse d'une vie trépidante",
+            "placeholder": "006.jpg"
+        },
+        {
+            "title": "L'attente bien-être",
+            "description": "Savoir que le temps peut se figer sur le bien que l'on se fait est d'une richesse intense",
+            "trivia": "Massage ou Sauna?",
+            "placeholder": "007.jpg"
+        },
+        {
+            "title": "L'éveil",
+            "description": "Le temps et l'écoute que l'on s'octroie redécouvre nos sens.",
+            "trivia": "Jamais sans moi.",
+            "placeholder": "008.jpg"
+        },
+        {
+            "title": "Pour Démo",
+            "description": "Merci au Microsoft Innovation Center et aux participants pour ce Learning path.",
+            "trivia": "Semper Melius",
+            "placeholder": "pour-demo.jpg"
         }
     ],
     "illustration": "ovifat.jpg"
