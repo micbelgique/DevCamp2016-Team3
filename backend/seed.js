@@ -45,45 +45,45 @@ function createOvifatMission () {
             "placeholder": "001.jpg"
         },
         {
-            "title": "En équilibre",
-            "description": "L'expérience forge le caractère et la chance sourit aux audacieux.",
-            "trivia": "On ne saura jamais s'il y avait des ortilles.",
+            "title": "L'éveil",
+            "description": "Le temps et l'écoute que l'on s'octroie redécouvre nos sens.",
+            "trivia": "Jamais sans moi.",
             "placeholder": "002.jpg"
-        },
-        {
-            "title": "Vive le sport",
-            "description": "Rien de telle que le soleil matinal sur une rosée naissante pour se balader sur des sentiers boisés.",
-            "trivia": "Mens sana in corpore sano.",
-            "placeholder": "003.jpg"
-        },
-        {
-            "title": "Hésitation",
-            "description": "Le vélo n'est peut-être qu'un prétexte à l'évasion.",
-            "trivia": "Avancer ou reculer il faut choisir.",
-            "placeholder": "004.jpg"
-        },
-        {
-            "title": "Entre danse et Tai Chi",
-            "description": "Les étendues verdoyantes sont toujours propices à l'élégance d'une danse champêtre",
-            "trivia": "Le centre du monde.",
-            "placeholder": "005.jpg"
-        },
-        {
-            "title": "Le vertige",
-            "description": "Cet équilibre qui étourdit la raison sur un plaisir des sens retrouvés.",
-            "trivia": "La chute d'Icare n'est qu'un prémisse d'une vie trépidante",
-            "placeholder": "006.jpg"
         },
         {
             "title": "L'attente bien-être",
             "description": "Savoir que le temps peut se figer sur le bien que l'on se fait est d'une richesse intense",
             "trivia": "Massage ou Sauna?",
+            "placeholder": "003.jpg"
+        },
+        {
+            "title": "Vive le sport",
+            "description": "Rien de telle que le soleil matinal sur une rosée naissante pour se balader sur des sentiers boisés.",
+            "trivia": "Mens sana in corpore sano.",
+            "placeholder": "004.jpg"
+        },
+        {
+            "title": "En équilibre",
+            "description": "L'expérience forge le caractère et la chance sourit aux audacieux.",
+            "trivia": "On ne saura jamais s'il y avait des ortilles.",
+            "placeholder": "005.jpg"
+        },
+        {
+            "title": "Entre danse et Tai Chi",
+            "description": "Les étendues verdoyantes sont toujours propices à l'élégance d'une danse champêtre",
+            "trivia": "Le centre du monde.",
+            "placeholder": "006.jpg"
+        },
+        {
+            "title": "Le vertige",
+            "description": "Cet équilibre qui étourdit la raison sur un plaisir des sens retrouvés.",
+            "trivia": "La chute d'Icare n'est qu'un prémisse d'une vie trépidante",
             "placeholder": "007.jpg"
         },
         {
-            "title": "L'éveil",
-            "description": "Le temps et l'écoute que l'on s'octroie redécouvre nos sens.",
-            "trivia": "Jamais sans moi.",
+            "title": "Hésitation",
+            "description": "Le vélo n'est peut-être qu'un prétexte à l'évasion.",
+            "trivia": "Avancer ou reculer il faut choisir.",
             "placeholder": "008.jpg"
         },
         {
