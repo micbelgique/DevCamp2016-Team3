@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "set DEBUG=cliches:* & node ./bin/www"
+    "start": "set DEBUG=cliches:* & node ./bin/www",
+    "seed": "node ./seed.js"
   },
   "dependencies": {
     "body-parser": "1.15.2",
@@ -12,6 +13,7 @@
     "express": "4.14.0",
     "mongoose": "4.5.8",
     "mongoose-slug-hero": "1.0.7",
-    "morgan": "1.7.0"
+    "morgan": "1.7.0",
+    "multer": "1.2.0"
   }
 }

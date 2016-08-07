@@ -11,7 +11,16 @@ const schema = new mongoose.Schema({
     required: true,
     type: String
   },
-  completed: [ { type: String } ]
+  completed: [ {
+    checkpoint: {
+      required: true,
+      type: String
+    },
+    file: {
+      required: true,
+      type: String
+    }
+  } ]
 }, {
   timestamps: true,
   toObject: {

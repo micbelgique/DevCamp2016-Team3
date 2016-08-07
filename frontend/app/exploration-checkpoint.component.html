@@ -1,2 +1,9 @@
-Exploration checkpoint<br>
-Upload your file !!!!!!!!!!!
+<div *ngIf="exploration">
+  <input type="file" ng2FileSelect [uploader]="uploader" />
+  <br/>
+  <br/>
+  <br/>
+  <button type="button" (click)="uploader.uploadAll()" [disabled]="!uploader.getNotUploadedItems().length">
+    Upload
+  </button>
+</div>

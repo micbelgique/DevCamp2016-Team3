@@ -2,9 +2,11 @@
 
 const categories = Object.freeze({
   "zen": "Zen",
-  "fun": "Fun",
-  "games": "Jeux",
-  "travel": "Voyage"
+  "wwii": "Seconde Guerre Mondiale",
+  "new_art": "Art Contemporain",
+  "snake": "Serpent",
+  "gugenheim": "Gugenheim",
+  "vandelay": "Vandelay"
 });
 
 module.exports = categories;

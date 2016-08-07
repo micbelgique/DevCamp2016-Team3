@@ -12,7 +12,6 @@ function createExplorationCheckpoint (req, res, next) {
   ;
 
   function ensureExplorationExists (exploration) {
-    require("debug")("cliches:backend")("ok", req.params.slug2);
     if (!exploration) {
       throw new httpErrors.NotFound();
     }
@@ -22,7 +21,18 @@ function createExplorationCheckpoint (req, res, next) {
 
   function completeCheckpoint (exploration) {
     // TODO: we should validate that this checkpoint exists
-    exploration.completed.push(req.params.slug2);
+
+    if (exploration.completed.some(item => {
+      return item.checkpoint === req.params.slug2;
+    }))
+    {
+      throw new httpErrors.Conflict();
+    }
+
+    exploration.completed.push({
+      checkpoint: req.params.slug2, // TODO: we should save the ID, not the slug
+      file: req.file.filename
+    });
 
     return exploration.save();
   }

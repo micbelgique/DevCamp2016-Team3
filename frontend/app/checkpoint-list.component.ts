@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Checkpoint } from './models/checkpoint';
 import { CheckpointListItemComponent } from './checkpoint-list-item.component';
+import { Exploration } from './models/exploration';
 
 @Component({
   selector: 'checkpoint-list',
@@ -9,6 +10,7 @@ import { CheckpointListItemComponent } from './checkpoint-list-item.component';
 })
 export class CheckpointListComponent implements OnInit {
   @Input() checkpoints: Array<Checkpoint>;
+  @Input() exploration: Exploration;
 
   constructor() { }
 

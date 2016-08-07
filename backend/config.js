@@ -5,7 +5,7 @@ const config = {
     url: process.env.MONGO_URL || "mongodb://localhost/cliches"
   },
   cors: {
-    origin: "http://localhost:3000"
+    origin: "*"
   },
   logger: {
     format: "dev"

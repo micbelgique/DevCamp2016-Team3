@@ -2,6 +2,7 @@ import { ActivatedRoute, ROUTER_DIRECTIVES, Router } from '@angular/router';
 import { CategoryPipe } from './pipes/category.pipe';
 import { CheckpointListComponent } from './checkpoint-list.component';
 import { Component, OnInit, OnDestroy} from '@angular/core';
+import { Exploration } from './models/exploration';
 import { Mission } from './models/mission';
 import { Observable } from 'rxjs/Rx';
 
@@ -16,7 +17,9 @@ import { MissionService } from './services/missions.service';
 })
 export class MissionDetailsComponent implements OnInit {
 
+    goToExplorationLabel: String = "DEMARRER";
     private errorMessage: string;
+    private exploration: Exploration;
     private mission: Mission;
     private sub: any;
 
@@ -28,19 +31,15 @@ export class MissionDetailsComponent implements OnInit {
 
     goToExploration() {
 
-        // NB: mission explorations could already been loaded in ngOnInit
-        this._explorationService.getExplorationsByMission(this.mission.id)
-            .map(explorations => {
-                if (explorations.length > 0) {
-                    this._router.navigate(['/explorations/' + explorations[0].slug])
-                } else {
-                    this._explorationService.createExploration(this.mission.id, this.mission.name)
-                        .subscribe(
-                            exploration => this._router.navigate(['/explorations/' + exploration.slug]),
-                            err => this.errorMessage = err
-                        );
-                }
-            }).subscribe();
+        if (this.exploration) {
+            this._router.navigate(['/explorations/' + this.exploration.slug])
+        } else {
+            this._explorationService.createExploration(this.mission.id, this.mission.name)
+                .subscribe(
+                exploration => this._router.navigate(['/explorations/' + exploration.slug]),
+                err => this.errorMessage = err
+                );
+        }
     }
 
     goToList() {
@@ -53,7 +52,19 @@ export class MissionDetailsComponent implements OnInit {
             if (params['slug'] !== undefined) {
                 this._missionService.getMissionBySlug(params['slug'])
                     .subscribe(
-                    m => this.mission = m,
+                    m => {
+                        this.mission = m;
+                        this._explorationService.getExplorationsByMission(this.mission.id)
+                            .subscribe(
+                            explorations => {
+                                if (explorations.length > 0) {
+                                    this.exploration = explorations[0];
+                                    this.goToExplorationLabel = "CONTINUER";
+                                }
+                            },
+                            err => this.errorMessage = err
+                            );
+                    },
                     err => this.errorMessage = err
                     );
             }
