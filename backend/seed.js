@@ -75,21 +75,21 @@ function createOvifatMission () {
             "placeholder": "006.jpg"
         },
         {
-            "title": "Step #7",
-            "description": "Bla bla...",
-            "trivia": "C'est Martine qui a posée pour réaliser cette oeuvre d'art en 2012 lors de la première édition du DevCamp.",
+            "title": "L'attente bien-être",
+            "description": "Savoir que le temps peut se figer sur le bien que l'on se fait est d'une richesse intense",
+            "trivia": "Massage ou Sauna?",
             "placeholder": "007.jpg"
         },
         {
-            "title": "Step #8",
-            "description": "Bla bla...",
-            "trivia": "C'est Martine qui a posée pour réaliser cette oeuvre d'art en 2012 lors de la première édition du DevCamp.",
+            "title": "L'éveil",
+            "description": "Le temps et l'écoute que l'on s'octroie redécouvre nos sens.",
+            "trivia": "Jamais sans moi.",
             "placeholder": "008.jpg"
         },
         {
             "title": "Pour Démo",
             "description": "Merci au Microsoft Innovation Center...",
-            "trivia": "",
+            "trivia": "Semper Melius",
             "placeholder": "pour-demo.jpg"
         }
     ],
