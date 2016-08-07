@@ -2,9 +2,11 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 const categories = Object.freeze({
   "zen": "Zen",
-  "fun": "Fun",
-  "games": "Jeux",
-  "travel": "Voyage"
+  "wwii": "Seconde Guerre Mondiale",
+  "new_art": "Art Contemporain",
+  "Snake": "Serpent",
+  "gugenheim": "Gugenheim",
+  "vandelay": "Vandelay"
 });
 
 @Pipe({ name: 'category' })

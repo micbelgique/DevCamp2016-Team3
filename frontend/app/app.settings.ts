@@ -5,7 +5,7 @@ export class AppSettings {
 }
 
 export const APP_SETTINGS: AppSettings = {
-  baseUrl: "http://192.168.241.36:3001"
+  baseUrl: "http://localhost:3001"
 };
 
 export const appSettingsProviders = [
