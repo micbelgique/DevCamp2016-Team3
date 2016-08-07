@@ -1,4 +1,4 @@
-   <article *ngIf="hasLoaded" id="details"> 
+   <article *ngIf="hasLoaded" id="details" @componentState="state" > 
     <header>    
       <div [style.background-image]="'url(/assets/images/missions/'+ mission.illustration + ')'" style="background: #f4f4f4 no-repeat center; background-size: cover;"></div>
       <nav class="topbar">
