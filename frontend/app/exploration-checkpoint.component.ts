@@ -55,7 +55,12 @@ export class ExplorationCheckpointComponent implements OnInit {
                                 form.append("checkpoint", this.checkpointSlug);
                             };
                             this.uploader.onCompleteItem = () => {
-                                this.router.navigate([`/missions/${this.exploration.mission.slug}/congratulations`]);
+                                if (this.checkpoint.slug === "TODO END") {
+                                    this.router.navigate([`/missions/${this.exploration.mission.slug}/congratulations`]);
+                                }
+                                else {
+                                    this.router.navigate([`/explorations/${this.exploration.mission.slug}`]);
+                                }
                             }
 
                             const completed = this.exploration.completed.filter(
