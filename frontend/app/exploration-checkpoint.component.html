@@ -1,13 +1,13 @@
 <div id="checkpoint-details" *ngIf="exploration">
   <div>
-    <figure class="flaged">
-      <img class="placeholder" src="assets/images/business/placeholder.jpg" alt="">
+    <figure [class]="isCompleted ? 'flaged' : ''">
+      <img class="placeholder" [src]="imageSrc" alt="">
     </figure>
-    <h3><span>Vous y êtes</span><span>Bientôt le badge Zen</span><span>•••</span></h3>
-    <p><strong>La biche</strong></p>
-    <p>Belle petite biche qui se trouve dans le Sauna, arriveras-tu à la photographier ? Elle se cache souvent sous son voile. Dernier indice, elle est blonde et pas la dernière si vous voyez ce que je veux dire.</p>
-    <p><strong>Saviez-vous que...</strong></p>
-    <p>C'est Martine qui a posée pour réaliser cette oeuvre d'art en 2012 lors de la première édition du DevCamp.</p>
+    <h3><span>{{exploration.mission.place}}</span><span>{{exploration.mission.category | category}}</span><span>•••</span></h3>
+    <p><strong>{{checkpoint.title}}</strong></p>
+    <p>{{checkpoint.description}}</p>
+    <p *ngIf="checkpoint.trivia"><strong>Le saviez-vous ?</strong></p>
+    <p *ngIf="checkpoint.trivia">{{checkpoint.trivia}}</p>
     <footer>
       <input type="file" id="fileUploader" ng2FileSelect [uploader]="uploader" style="display: none;" />
       <button [class]="uploader.getNotUploadedItems().length ? 'upload' : ''" (click)="browse()">
@@ -16,5 +16,3 @@
     </footer>
   </div>
 </div>
-
-<!--  (click)="uploader.uploadAll()" [disabled]="!uploader.getNotUploadedItems().length" -->
