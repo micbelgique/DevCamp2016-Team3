@@ -12,7 +12,7 @@ const routes: RouterConfig = [
         pathMatch: 'full'
     },
     {
-        path: 'congratulations',
+        path: 'missions/:slug/congratulations',
         component: CongratulationsComponent
     },
     {
