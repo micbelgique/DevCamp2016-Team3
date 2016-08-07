@@ -89,7 +89,7 @@ export class ExplorationCheckpointComponent implements OnInit {
             if (this.uploader.getNotUploadedItems().length > 0) {
                 setTimeout(() => {
                 this.uploader.uploadAll();
-                }, 1500);
+                }, 500);
                 clearTimeout(this.timeout);
             }
         }, 250);
