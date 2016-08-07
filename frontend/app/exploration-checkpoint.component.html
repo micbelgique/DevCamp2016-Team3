@@ -1,7 +1,7 @@
 <div id="checkpoint-details" *ngIf="exploration">
   <div>
-    <figure class="">
-      <img class="placeholder" src="assets/images/business/placeholder.jpg" alt="">
+    <figure [class]="isCompleted ? 'flaged' : ''">
+      <img class="placeholder" [src]="imageSrc" alt="">
     </figure>
     <h3><span>{{exploration.mission.place}}</span><span>{{exploration.mission.category | category}}</span><span>•••</span></h3>
     <p><strong>{{checkpoint.title}}</strong></p>

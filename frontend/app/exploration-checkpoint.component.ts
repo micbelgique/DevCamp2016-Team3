@@ -17,6 +17,8 @@ import { AppSettings } from './app.settings';
 })
 export class ExplorationCheckpointComponent implements OnInit {
     public uploader: FileUploader
+    imageSrc: String;
+    isCompleted: Boolean;
     private errorMessage: string;
     private exploration: Exploration;
     private checkpoint: Checkpoint;
@@ -54,6 +56,17 @@ export class ExplorationCheckpointComponent implements OnInit {
                             };
                             this.uploader.onCompleteItem = () => {
                                 this.router.navigate([`/missions/${this.exploration.mission.slug}/congratulations`]);
+                            }
+
+                            const completed = this.exploration.completed.filter(
+                                item => item.checkpoint === this.checkpointSlug
+                            );
+                            this.imageSrc = `assets/images/missions-map/${this.checkpoint.placeholder}`;
+
+                            if (completed.length > 0)
+                            {
+                                this.isCompleted = true;
+                                this.imageSrc = `http://localhost:3001/uploads/${completed[0].file}`;
                             }
                         },
                         err => this.errorMessage = err
