@@ -1,31 +1,31 @@
-   <article *ngIf="hasLoaded" id="details" @componentState="state" > 
-    <header>    
-      <div [style.background-image]="'url(/assets/images/missions/'+ mission.illustration + ')'" style="background: #f4f4f4 no-repeat center; background-size: cover;"></div>
-      <nav class="topbar">
-        <button class="back" (click)="goToList()"></button>
-        <h1>{{mission.name}}</h1>
-      </nav>
-      <h2>{{mission.sponsor}}</h2>
-      <h3>
-        <div><span>{{mission.place}}</span><span>{{mission.category | category}}</span></div>
-        <div><button (click)="goToExploration()">{{goToExplorationLabel}}</button></div>
-      </h3>
-    </header>
-    <div class="wrap">
-      <div>
-        <h4>Description</h4>
-        <p>{{mission.description}}</p>
-      </div>
-      <div>
-        <checkpoint-list [checkpoints]="mission.checkpoints" [exploration]="exploration"></checkpoint-list>
-      </div>
-      <div>
-        <h4>Votre mission</h4>
-        <p>{{mission.introduction}}</p>
-      </div>
-      <div>
-        <h4>Vous découvrirez</h4>
-        <p>{{mission.discovery}}</p>
-      </div>
+<article *ngIf="hasLoaded" id="details">
+  <header>
+    <div [style.background-image]="'url(/assets/images/missions/'+ mission.illustration + ')'" style="background: #f4f4f4 no-repeat center; background-size: cover;"></div>
+    <nav class="topbar">
+      <button class="back" (click)="goToList()"></button>
+      <h1>{{mission.name}}</h1>
+    </nav>
+    <h2>{{mission.sponsor}}</h2>
+    <h3>
+      <div><span>{{mission.place}}</span><span>{{mission.category | category}}</span></div>
+      <div><button (click)="goToExploration()">{{goToExplorationLabel}}</button></div>
+    </h3>
+  </header>
+  <div class="wrap">
+    <div>
+      <h4>Description</h4>
+      <p>{{mission.description}}</p>
     </div>
-  </article>
+    <div>
+      <checkpoint-list [checkpoints]="mission.checkpoints" [exploration]="exploration"></checkpoint-list>
+    </div>
+    <div>
+      <h4>Votre mission</h4>
+      <p>{{mission.introduction}}</p>
+    </div>
+    <div>
+      <h4>Vous découvrirez</h4>
+      <p>{{mission.discovery}}</p>
+    </div>
+  </div>
+</article>
