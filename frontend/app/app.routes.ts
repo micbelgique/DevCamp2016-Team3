@@ -12,10 +12,6 @@ const routes: RouterConfig = [
         pathMatch: 'full'
     },
     {
-        path: 'congratulations',
-        component: CongratulationsComponent
-    },
-    {
         path: 'explorations/:slug',
         component: ExplorationComponent
     },
@@ -30,6 +26,10 @@ const routes: RouterConfig = [
     {
         path: 'missions/:slug',
         component: MissionDetailsComponent
+    },
+    {
+        path: 'missions/:slug/congratulations',
+        component: CongratulationsComponent
     }
 ];
 
