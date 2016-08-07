@@ -10,6 +10,10 @@ const schema = new mongoose.Schema({
     required: true,
     type: String
   },
+  trivia: {
+    required: true,
+    type: String
+  },
   placeholder: {
     required: true,
     type: String
