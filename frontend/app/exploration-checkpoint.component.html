@@ -6,8 +6,8 @@
     <h3><span>{{exploration.mission.place}}</span><span>{{exploration.mission.category | category}}</span><span>•••</span></h3>
     <p><strong>{{checkpoint.title}}</strong></p>
     <p>{{checkpoint.description}}</p>
-    <p><strong>Le saviez-vous ?</strong></p>
-    <p>{{checkpoint.trivia}}</p>
+    <p *ngIf="checkpoint.trivia"><strong>Le saviez-vous ?</strong></p>
+    <p *ngIf="checkpoint.trivia">{{checkpoint.trivia}}</p>
     <footer>
       <input type="file" id="fileUploader" ng2FileSelect [uploader]="uploader" style="display: none;" />
       <button [class]="uploader.getNotUploadedItems().length ? 'upload' : ''" (click)="browse()">

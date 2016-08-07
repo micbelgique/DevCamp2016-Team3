@@ -55,7 +55,7 @@ export class ExplorationCheckpointComponent implements OnInit {
                                 form.append("checkpoint", this.checkpointSlug);
                             };
                             this.uploader.onCompleteItem = () => {
-                                if (this.checkpoint.slug === "TODO END") {
+                                if (this.checkpoint.slug === "pour-demo") {
                                     this.router.navigate([`/missions/${this.exploration.mission.slug}/congratulations`]);
                                 }
                                 else {
