@@ -96,4 +96,8 @@ export class ExplorationCheckpointComponent implements OnInit {
 
         document.getElementById("fileUploader").click();
     }
+    
+    goToCheckpoint() {
+        this.router.navigate([`/explorations/${this.exploration.mission.slug}`]);
+    }
 }

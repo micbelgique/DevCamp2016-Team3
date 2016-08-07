@@ -1,5 +1,10 @@
 <div id="checkpoint-details" *ngIf="exploration">
   <div>
+    <header>    
+      <nav class="topbar">
+        <button class="back" (click)="goToCheckpoint()"></button>
+      </nav>
+    </header>
     <figure [class]="isCompleted ? 'flaged' : ''">
       <img class="placeholder" [src]="imageSrc" alt="">
     </figure>
