@@ -39,9 +39,9 @@ function createOvifatMission () {
     "checkpoints":
     [
         {
-            "title": "Step #1",
-            "description": "Bla bla...",
-            "trivia": "C'est Martine qui a posée pour réaliser cette oeuvre d'art en 2012 lors de la première édition du DevCamp.",
+            "title": "L'innocence du plaisir",
+            "description": "Instantané du plaisir des vacances retrouvées. Un moment de détente sur l'embrun d'une eau s'apaisant",
+            "trivia": "Les carpes s'en souviennent",
             "placeholder": "001.jpg"
         },
         {
@@ -54,37 +54,37 @@ function createOvifatMission () {
             "title": "Step #3",
             "description": "Bla bla...",
             "trivia": "C'est Martine qui a posée pour réaliser cette oeuvre d'art en 2012 lors de la première édition du DevCamp.",
-            "placeholder": "001.jpg"
+            "placeholder": "003.jpg"
         },
         {
             "title": "Step #4",
             "description": "Bla bla...",
             "trivia": "C'est Martine qui a posée pour réaliser cette oeuvre d'art en 2012 lors de la première édition du DevCamp.",
-            "placeholder": "002.jpg"
+            "placeholder": "004.jpg"
         },
         {
             "title": "Step #5",
             "description": "Bla bla...",
             "trivia": "C'est Martine qui a posée pour réaliser cette oeuvre d'art en 2012 lors de la première édition du DevCamp.",
-            "placeholder": "001.jpg"
+            "placeholder": "005.jpg"
         },
         {
             "title": "Step #6",
             "description": "Bla bla...",
             "trivia": "C'est Martine qui a posée pour réaliser cette oeuvre d'art en 2012 lors de la première édition du DevCamp.",
-            "placeholder": "002.jpg"
+            "placeholder": "006.jpg"
         },
         {
             "title": "Step #7",
             "description": "Bla bla...",
             "trivia": "C'est Martine qui a posée pour réaliser cette oeuvre d'art en 2012 lors de la première édition du DevCamp.",
-            "placeholder": "001.jpg"
+            "placeholder": "007.jpg"
         },
         {
             "title": "Step #8",
             "description": "Bla bla...",
             "trivia": "C'est Martine qui a posée pour réaliser cette oeuvre d'art en 2012 lors de la première édition du DevCamp.",
-            "placeholder": "001.jpg"
+            "placeholder": "008.jpg"
         },
         {
             "title": "Pour Démo",
