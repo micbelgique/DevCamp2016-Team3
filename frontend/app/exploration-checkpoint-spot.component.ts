@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Exploration } from './models/exploration';
 import { ROUTER_DIRECTIVES } from '@angular/router';
+import { AppSettings } from './app.settings';
 
 @Component({
     directives:[
@@ -13,13 +14,25 @@ export class ExplorationCheckpointSpotComponent implements OnInit {
     
     @Input() exploration: Exploration;
     @Input() checkpointSlug: string;
+    imageSrc: String;
+
     private isCompleted: boolean;
 
-    constructor() { }
+    constructor(private appSettings: AppSettings) { }
 
-    ngOnInit() { 
-        this.isCompleted = this.exploration.completed.some(
+    ngOnInit() {
+        const checkpoint = this.exploration.mission.checkpoints.filter(
+            item => item.slug === this.checkpointSlug
+        )[0];
+        const completed = this.exploration.completed.filter(
             item => item.checkpoint === this.checkpointSlug
         );
+        this.imageSrc = `assets/images/missions-map/${checkpoint.placeholder}`;
+
+        if (completed.length > 0)
+        {
+            this.isCompleted = true;
+            this.imageSrc = `${this.appSettings.baseUrl}/uploads/${completed[0].file}`;
+        }
     }
 }

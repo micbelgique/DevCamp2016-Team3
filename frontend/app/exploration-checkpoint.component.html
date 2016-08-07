@@ -1,9 +1,18 @@
-<div *ngIf="exploration">
-  <input type="file" ng2FileSelect [uploader]="uploader" />
-  <br/>
-  <br/>
-  <br/>
-  <button type="button" (click)="uploader.uploadAll()" [disabled]="!uploader.getNotUploadedItems().length">
-    Upload
-  </button>
+<div id="checkpoint-details" *ngIf="exploration">
+  <div>
+    <figure [class]="isCompleted ? 'flaged' : ''">
+      <img class="placeholder" [src]="imageSrc" alt="">
+    </figure>
+    <h3><span>{{exploration.mission.place}}</span><span>{{exploration.mission.category | category}}</span><span>•••</span></h3>
+    <p><strong>{{checkpoint.title}}</strong></p>
+    <p>{{checkpoint.description}}</p>
+    <p><strong>Le saviez-vous ?</strong></p>
+    <p>{{checkpoint.trivia}}</p>
+    <footer>
+      <input type="file" id="fileUploader" ng2FileSelect [uploader]="uploader" style="display: none;" />
+      <button [class]="uploader.getNotUploadedItems().length ? 'upload' : ''" (click)="browse()">
+        <svg viewBox="0 0 14 9" xmlns="http://www.w3.org/2000/svg"><title>photo</title><g fill="none" fill-rule="evenodd"><ellipse fill="#000" cx="7" cy="5" rx="1.333" ry="1.333"/><path d="M4.987 1.667h-3.32c-.46 0-.834.375-.834.833v5c0 .458.375.833.834.833h10.666c.46 0 .834-.375.834-.833v-5c0-.458-.375-.833-.834-.833h-3.32L8.25.833h-2.5l-.763.834zM7 7.083C5.85 7.083 4.917 6.15 4.917 5c0-1.15.933-2.083 2.083-2.083 1.15 0 2.083.933 2.083 2.083 0 1.15-.933 2.083-2.083 2.083z" fill="#000"/><circle fill="#F2F2F2" cx="11.5" cy="3.5" r=".5"/><path fill="#000" d="M2 1h2v.5H2z"/></g></svg>
+        </button>
+    </footer>
+  </div>
 </div>

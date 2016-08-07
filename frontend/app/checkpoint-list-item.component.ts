@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Checkpoint } from './models/checkpoint';
 import { Exploration } from './models/exploration';
+import { AppSettings } from './app.settings';
 
 @Component({
   selector: 'checkpoint-list-item',
@@ -9,12 +10,23 @@ import { Exploration } from './models/exploration';
 export class CheckpointListItemComponent implements OnInit {
   @Input() checkpoint: Checkpoint;
   @Input() exploration: Exploration;
+  imageSrc: String;
 
   isCompleted: Boolean;
   
-  constructor() { }
+  constructor(private appSettings: AppSettings) { }
 
   ngOnInit() {
-    this.isCompleted = this.exploration && this.exploration.completed.some(item => item.checkpoint === this.checkpoint.slug);
+      const completed = this.exploration && this.exploration.completed.filter(
+          item => item.checkpoint === this.checkpoint.slug
+      );
+      this.imageSrc = `assets/images/missions-map/${this.checkpoint.placeholder}`;
+      this.isCompleted = this.exploration && this.exploration.completed.some(item => item.checkpoint === this.checkpoint.slug);
+
+      if (this.isCompleted)
+      {
+          this.imageSrc = `${this.appSettings.baseUrl}/uploads/${completed[0].file}`;
+      }
+    
   }
 }
