@@ -2,20 +2,24 @@ import { ActivatedRoute, ROUTER_DIRECTIVES, Router } from '@angular/router';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Exploration } from './models/exploration';
+import { Checkpoint } from './models/checkpoint';
 import { ExplorationService } from './services/explorations.service';
 import { FILE_UPLOAD_DIRECTIVES, FileUploader } from 'ng2-file-upload';
+import { CategoryPipe } from './pipes/category.pipe';
 
 import { AppSettings } from './app.settings';
 
 @Component({
     selector: 'exploration-checkpoint',
     templateUrl: 'app/exploration-checkpoint.component.html',
-    directives: [FILE_UPLOAD_DIRECTIVES]
+    directives: [FILE_UPLOAD_DIRECTIVES],
+    pipes: [CategoryPipe]
 })
 export class ExplorationCheckpointComponent implements OnInit {
     public uploader: FileUploader
     private errorMessage: string;
     private exploration: Exploration;
+    private checkpoint: Checkpoint;
     private checkpointSlug: String;
     private sub: any;
     private timeout: any;
@@ -38,6 +42,7 @@ export class ExplorationCheckpointComponent implements OnInit {
                     .subscribe(
                         exp => {
                             this.exploration = exp;
+                            this.checkpoint = exp.mission.checkpoints.filter(item => item.slug === this.checkpointSlug)[0];
                             this.uploader = new FileUploader({
                                 url: `${this.appSettings.baseUrl}/explorations/${this.exploration.slug}/checkpoints/${this.checkpointSlug}`
                             });
