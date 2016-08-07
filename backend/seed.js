@@ -42,19 +42,19 @@ function createOvifatMission () {
             "title": "Step #1",
             "description": "Bla bla...",
             "trivia": "C'est Martine qui a posée pour réaliser cette oeuvre d'art en 2012 lors de la première édition du DevCamp.",
-            "placeholder": "placeholder.jpg"
+            "placeholder": "001.jpg"
         },
         {
             "title": "Step #2",
             "description": "Bla bla...",
             "trivia": "C'est Martine qui a posée pour réaliser cette oeuvre d'art en 2012 lors de la première édition du DevCamp.",
-            "placeholder": "placeholder.jpg"
+            "placeholder": "002.jpg"
         },
         {
             "title": "Step #3",
             "description": "Bla bla...",
             "trivia": "C'est Martine qui a posée pour réaliser cette oeuvre d'art en 2012 lors de la première édition du DevCamp.",
-            "placeholder": "placeholder.jpg"
+            "placeholder": "003.jpg"
         }
     ],
     "illustration": "ovifat.jpg"
