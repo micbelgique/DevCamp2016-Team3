@@ -1,0 +1,170 @@
+// CHECKPOINT DETAILS, CONGRATULATIONS
+
+#checkpoint-details, #congratulations {
+	//display: none;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 30;
+	width: 100vw;
+	height: 100vh;
+	background-color: transparentize($black, .4);
+	& > div {
+		position: absolute;
+		top: 5vh;
+		left: 5vw;
+		width: 90vw;
+		height: 90vh;
+		@include border-radius(10px);
+		text-align: center;
+		font-size: 1.6rem;
+		background-color: transparentize($white, 0);
+	}
+	h1 {
+		color: $black;
+		font-weight: 400;
+		font-size: 1.3rem;
+		span {
+			font-weight: 600;
+		}
+	}
+}
+
+#checkpoint-details {
+	background: url(../images/map.jpg) no-repeat center center;
+	background-size: cover;
+	&:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		content: '';
+		background-color: transparentize($black, .4);
+	}
+	.close:before, .close:after  {
+		background-color: $black;
+	}
+	figure {
+		position: relative;
+		@include border-radius(10px 10px 0 0);
+		overflow: hidden;
+		margin-bottom: 20px;
+		height: 250px;
+		background-color: $grey;
+		&.flaged:before {
+			position: absolute;
+			z-index: 40;
+			right: 20px;
+			display: block;
+			width: 60px;
+			height: 60px;
+			@include border-radius(30px);
+			content: '';
+			background: green url(../images/flag.svg) no-repeat center center;
+    	background-size: 20px;
+		}
+	}
+	img {
+		width: 100%;
+		&.placeholder {
+			opacity: .5;
+		}
+	}
+	h3 {
+		padding: 0 20px;
+		text-align: left;
+		span {
+			color: transparentize($black, .5);
+		}
+	}
+	p {
+		text-align: left;
+		padding: 0 20px;
+		font-size: .9rem;
+		&+p {
+			margin-top: 10px;
+			line-height: 1.4rem;
+		}
+	}
+	footer {
+		padding-bottom: 30px;
+		button {
+			position: relative;
+			width: 60px;
+			height: 60px;
+			@include border-radius(50%);
+			padding: 0;
+			&:active {
+				background-color: transparentize($black, .5);
+			}
+			
+			// UPLOAD
+
+			&.upload {
+				svg {
+					display: none;
+				}
+				&:before {
+					position: absolute;
+					top: calc(50% - 14px);
+					left: calc(50% - 14px);
+					display: block;
+					content: '';
+					width: 20px;
+					height: 20px;
+					@include border-radius(14px);
+					border: 4px solid transparentize($black, .9);
+					border-right-color: $black;
+				}
+			}
+		
+		}
+		svg {
+			position: absolute;
+			left: calc(50% - 20px);
+			top: 16px;
+			width: 40px;
+		}
+	}
+}
+
+#congratulations {
+	svg {
+		position: absolute;
+		top: 200px;
+		left: calc(50% - 50px);
+		width: 100px;
+	}
+	background-color: $yellow;
+	& > div {
+		top: 60vh;
+		height: 35vh;
+		background: none;
+		h1 {
+			color: darken($yellow, 35%);
+			line-height: 1.7rem;
+		}
+	}
+}
+
+footer {
+	position: absolute;
+	z-index: 40;
+	bottom: 0;
+	width: 100%;
+	button {
+		width: 50%;
+		@include border-radius(5px);
+		border: 1px solid darken($yellow, 35%);
+		padding: 12px 0;
+		color: darken($yellow, 35%);
+		font-size: 1.2rem;
+		background: none;
+		&:active {
+			color: $white;
+			background-color: $black;
+		}
+	}
+}
