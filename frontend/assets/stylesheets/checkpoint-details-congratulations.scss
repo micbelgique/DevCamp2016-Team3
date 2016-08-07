@@ -43,6 +43,12 @@
 		content: '';
 		background-color: transparentize($black, .4);
 	}
+	header {
+		padding: 0;
+		position: absolute;
+		z-index: 50;
+		top: 0px;
+	}
 	.close:before, .close:after  {
 		background-color: $black;
 	}
