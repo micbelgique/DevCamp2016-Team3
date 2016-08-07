@@ -51,6 +51,42 @@ function createOvifatMission () {
             "placeholder": "002.jpg"
         },
         {
+            "title": "Step #3",
+            "description": "Bla bla...",
+            "trivia": "C'est Martine qui a posée pour réaliser cette oeuvre d'art en 2012 lors de la première édition du DevCamp.",
+            "placeholder": "001.jpg"
+        },
+        {
+            "title": "Step #4",
+            "description": "Bla bla...",
+            "trivia": "C'est Martine qui a posée pour réaliser cette oeuvre d'art en 2012 lors de la première édition du DevCamp.",
+            "placeholder": "002.jpg"
+        },
+        {
+            "title": "Step #5",
+            "description": "Bla bla...",
+            "trivia": "C'est Martine qui a posée pour réaliser cette oeuvre d'art en 2012 lors de la première édition du DevCamp.",
+            "placeholder": "001.jpg"
+        },
+        {
+            "title": "Step #6",
+            "description": "Bla bla...",
+            "trivia": "C'est Martine qui a posée pour réaliser cette oeuvre d'art en 2012 lors de la première édition du DevCamp.",
+            "placeholder": "002.jpg"
+        },
+        {
+            "title": "Step #7",
+            "description": "Bla bla...",
+            "trivia": "C'est Martine qui a posée pour réaliser cette oeuvre d'art en 2012 lors de la première édition du DevCamp.",
+            "placeholder": "001.jpg"
+        },
+        {
+            "title": "Step #8",
+            "description": "Bla bla...",
+            "trivia": "C'est Martine qui a posée pour réaliser cette oeuvre d'art en 2012 lors de la première édition du DevCamp.",
+            "placeholder": "001.jpg"
+        },
+        {
             "title": "Pour Démo",
             "description": "Merci au Microsoft Innovation Center...",
             "trivia": "",
