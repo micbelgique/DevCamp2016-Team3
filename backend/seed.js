@@ -88,7 +88,7 @@ function createOvifatMission () {
         },
         {
             "title": "Pour Démo",
-            "description": "Merci au Microsoft Innovation Center...",
+            "description": "Merci au Microsoft Innovation Center et aux participants pour ce Learning path.",
             "trivia": "Semper Melius",
             "placeholder": "pour-demo.jpg"
         }
