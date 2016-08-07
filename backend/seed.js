@@ -41,31 +41,31 @@ function createOvifatMission () {
         {
             "title": "L'innocence du plaisir",
             "description": "Instantané du plaisir des vacances retrouvées. Un moment de détente sur l'embrun d'une eau s'apaisant",
-            "trivia": "Les carpes s'en souviennent",
+            "trivia": "Les carpes s'en souviennent.",
             "placeholder": "001.jpg"
         },
         {
-            "title": "Step #2",
-            "description": "Bla bla...",
-            "trivia": "C'est Martine qui a posée pour réaliser cette oeuvre d'art en 2012 lors de la première édition du DevCamp.",
+            "title": "En équilibre",
+            "description": "L'expérience forge le caractère et la chance sourit aux audacieux.",
+            "trivia": "On ne saura jamais s'il y avait des ortilles.",
             "placeholder": "002.jpg"
         },
         {
-            "title": "Step #3",
-            "description": "Bla bla...",
-            "trivia": "C'est Martine qui a posée pour réaliser cette oeuvre d'art en 2012 lors de la première édition du DevCamp.",
+            "title": "Vive le sport",
+            "description": "Rien de telle que le soleil matinal sur une rosée naissante pour se balader sur des sentiers boisés.",
+            "trivia": "Mens sana in corpore sano.",
             "placeholder": "003.jpg"
         },
         {
-            "title": "Step #4",
-            "description": "Bla bla...",
-            "trivia": "C'est Martine qui a posée pour réaliser cette oeuvre d'art en 2012 lors de la première édition du DevCamp.",
+            "title": "Hésitation",
+            "description": "Est-ce que j'avance ou je recule? Le sport n'est peut-être qu'un prétexte.",
+            "trivia": "Le vélo s'en souvient.",
             "placeholder": "004.jpg"
         },
         {
-            "title": "Step #5",
-            "description": "Bla bla...",
-            "trivia": "C'est Martine qui a posée pour réaliser cette oeuvre d'art en 2012 lors de la première édition du DevCamp.",
+            "title": "Entre danse et Tai Chi",
+            "description": "Les étendues verdoyantes sont toujours propices à l'élégance d'une danse champêtre",
+            "trivia": "Le centre du monde.",
             "placeholder": "005.jpg"
         },
         {
