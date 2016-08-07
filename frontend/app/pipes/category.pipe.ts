@@ -4,7 +4,7 @@ const categories = Object.freeze({
   "zen": "Zen",
   "wwii": "Seconde Guerre Mondiale",
   "new_art": "Art Contemporain",
-  "Snake": "Serpent",
+  "snake": "Serpent",
   "gugenheim": "Gugenheim",
   "vandelay": "Vandelay"
 });
