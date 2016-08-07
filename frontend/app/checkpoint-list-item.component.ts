@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Checkpoint } from './models/checkpoint';
 import { Exploration } from './models/exploration';
+import { AppSettings } from './app.settings';
 
 @Component({
   selector: 'checkpoint-list-item',
@@ -13,7 +14,7 @@ export class CheckpointListItemComponent implements OnInit {
 
   isCompleted: Boolean;
   
-  constructor() { }
+  constructor(private appSettings: AppSettings) { }
 
   ngOnInit() {
       const completed = this.exploration && this.exploration.completed.filter(
@@ -24,7 +25,7 @@ export class CheckpointListItemComponent implements OnInit {
 
       if (this.isCompleted)
       {
-          this.imageSrc = `http://localhost:3001/uploads/${completed[0].file}`;
+          this.imageSrc = `${this.appSettings.baseUrl}/uploads/${completed[0].file}`;
       }
     
   }

@@ -66,7 +66,7 @@ export class ExplorationCheckpointComponent implements OnInit {
                             if (completed.length > 0)
                             {
                                 this.isCompleted = true;
-                                this.imageSrc = `http://localhost:3001/uploads/${completed[0].file}`;
+                                this.imageSrc = `${this.appSettings.baseUrl}/uploads/${completed[0].file}`;
                             }
                         },
                         err => this.errorMessage = err
