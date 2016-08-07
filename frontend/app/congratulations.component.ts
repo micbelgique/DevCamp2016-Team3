@@ -12,14 +12,22 @@ import { CategoryPipe } from './pipes/category.pipe';
 })
 export class CongratulationsComponent implements OnInit {
 
+    private sub: any;
     private errorMessage: string;
     private mission: Mission;
-    private sub: any;
 
-    constructor(private missionService: MissionService, private route: ActivatedRoute) { }
+    constructor(
+        private missionService: MissionService,
+        private _route: ActivatedRoute,
+        private _router: Router) { }
+
+    goToMission() {
+        this._router.navigate([`/missions/${this.mission.slug}`]);
+    }
 
     ngOnInit() {
-        this.sub = this.route.params.subscribe(params => {
+
+        this.sub = this._route.params.subscribe(params => {
             if (params['slug'] !== undefined) {
                 this.missionService.getMissionBySlug(params['slug'])
                     .subscribe(
@@ -30,7 +38,7 @@ export class CongratulationsComponent implements OnInit {
                     );
             }
         });
-     }
+    }
 
     ngOnDestroy() {
         this.sub.unsubscribe();
