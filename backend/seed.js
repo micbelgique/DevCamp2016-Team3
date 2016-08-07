@@ -58,8 +58,8 @@ function createOvifatMission () {
         },
         {
             "title": "Hésitation",
-            "description": "Est-ce que j'avance ou je recule? Le sport n'est peut-être qu'un prétexte.",
-            "trivia": "Le vélo s'en souvient.",
+            "description": "Le vélo n'est peut-être qu'un prétexte à l'évasion.",
+            "trivia": "Avancer ou reculer il faut choisir.",
             "placeholder": "004.jpg"
         },
         {
