@@ -6,7 +6,7 @@
     "start": "node ./bin/www",
     "dev": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
     "lite": "lite-server -c ./bs-config.js",
-    "postinstall": "replace \"http://localhost:3001\" \"https://cliches-backendend.herokuapp.com\" app/app.settings.ts && typings install && tsc",
+    "postinstall": "replace \"http://localhost:3001\" \"https://cliches-backend.herokuapp.com\" app/app.settings.ts && typings install && tsc",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "typings": "typings"
