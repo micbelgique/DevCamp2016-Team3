@@ -6,7 +6,9 @@ const Mission = require("./models/mission");
 
 // Mongo connection
 mongoose.connect(config.db.url, { server: { auto_reconnect: true } }, () => {
-  mongoose.connection.db.dropDatabase();
+  mongoose.connection.db.dropCollection("missions");
+  mongoose.connection.db.dropCollection("explorations");
+  mongoose.connection.db.dropCollection("_slug_ctr");
 });
 
 createBastogneMission()
