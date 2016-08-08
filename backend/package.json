@@ -11,9 +11,11 @@
     "cors": "2.7.1",
     "debug": "2.2.0",
     "express": "4.14.0",
+    "lodash": "3.10.1",
     "mongoose": "4.5.8",
     "mongoose-slug-hero": "1.0.7",
     "morgan": "1.7.0",
-    "multer": "1.2.0"
+    "multer": "1.2.0",
+    "slug": "0.9.1"
   }
 }
