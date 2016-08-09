@@ -41,4 +41,5 @@ jspm_packages
 .vscode
 
 # Application upload directory
-uploads
+uploads/*
+!uploads/.keep
