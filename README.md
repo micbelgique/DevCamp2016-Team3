@@ -41,8 +41,8 @@ npm start
 ## How to deploy on Heroku ?
 ```
 git remote add heroku-backend https://git.heroku.com/cliches-backend.git
-heroku-backend.bat
+git subtree push --prefix backend heroku-backend master
 
 git remote add heroku-frontend https://git.heroku.com/cliches-frontend.git
-heroku-frontend.bat
+git subtree push --prefix frontend heroku-frontend master
 ```
