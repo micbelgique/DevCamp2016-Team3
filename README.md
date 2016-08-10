@@ -10,6 +10,13 @@
 *	Nicolas Van Eeckhout, business discoverer ([@vaneeckhout](https://twitter.com/vaneeckhout))
 *	Fabian Vilers, byte cruncher ([@fvilers](https://twitter.com/fvilers))
 
+## Tech stack
+* NodeJS
+* Express
+* MongoDB
+* Angular 2
+* HTML 5
+
 ## How to run ?
 * Start MongoDB
 * Start the Back-End server
